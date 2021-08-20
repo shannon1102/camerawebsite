@@ -2,6 +2,7 @@
 const mysql = require('mysql');
 const logger = require('../../logger');
 const { to } = require('../../helper/to');
+const {createSlug} = require('../../utils/index')
 class CategoryService {
     constructor(mysqlDb) {
         this.mysqlDb = mysqlDb
@@ -44,9 +45,32 @@ class CategoryService {
         return new Promise(async (resolve, reject) => {
             try {  
                 const query2 = `
-                SELECT category.*,main_category.name AS main_category_name FROM category JOIN main_category 
-                ON category.main_category_id = main_category.id 
+                SELECT * from category
                 WHERE category.id = ${mysql.escape(id)}
+                `
+                const [err, categoryResult] = await to(this.mysqlDb.poolQuery(query2))
+                if (err) {
+                    logger.error(`[CategoryService][getCategoryById] errors: `, err)
+                    return reject(err?.sqlMessage ? err.sqlMessage : err)
+                }
+                if (!categoryResult.length) {
+                    return reject(`category with id ${id} not found`)
+                }
+                return resolve(categoryResult[0])
+
+            } catch (error) {
+                console.log(error);
+                reject(error)
+            }
+
+        })
+    }
+    getCategoryBySlug(slug) {
+        return new Promise(async (resolve, reject) => {
+            try {  
+                const query2 = `
+                SELECT * from category
+                WHERE category.slug = ${mysql.escape(slug)}
                 `
                 const [err, categoryResult] = await to(this.mysqlDb.poolQuery(query2))
                 if (err) {
@@ -79,11 +103,13 @@ class CategoryService {
             return resolve(categoryResult)
         })
     }
-    createCategory(name, main_category_id) {
+    createCategory(name, description) {
         return new Promise(async (resolve, reject) => {
+            console.log(name);
+            const slug = createSlug(name);
             const query = `
-                INSERT INTO category(name,main_category_id)
-                VALUES(${mysql.escape(name)},${mysql.escape(main_category_id)})`
+                INSERT INTO category(name,description,slug)
+                VALUES(${mysql.escape(name)},${mysql.escape(description)},${mysql.escape(slug)})`
 
             const [err, result] = await to(this.mysqlDb.poolQuery(query))
             if (err) {
@@ -94,12 +120,14 @@ class CategoryService {
             return resolve(result?.insertId)
         })
     }
-    updateCategory(id, name, main_category_id) {
+    updateCategory(id, name, description) {
         return new Promise(async (resolve, reject) => {
+            const newSlug = createSlug(name);
             const query = `
                 UPDATE category SET 
                 name = ${mysql.escape(name)},
-                main_category_id = ${mysql.escape(main_category_id)}
+                description = ${mysql.escape(description)},
+                slug = ${mysql.escape(newSlug)}
                 WHERE id = ${mysql.escape(id)}
             `
             const [err, result] = await to(this.mysqlDb.poolQuery(query))

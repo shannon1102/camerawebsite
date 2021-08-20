@@ -125,45 +125,31 @@ class ProductService {
     //         });
 
     // }
-    // getProductById(id) {
+    getProductById(id) {
 
-    //     return new Promise(async (resolve, reject) => {
+        return new Promise(async (resolve, reject) => {
 
-    //         const query = `
-    //         SELECT * FROM product_image AS pi
-    //         WHERE pi.product_id = ${mysql.escape(id)}`
-    //         const [err, list_image_result] = await to(this.mysqlDb.poolQuery(query))
-    //         const listImageReturn =
-    //             [list_image_result[0].url_image1, list_image_result[0].url_image2, list_image_result[0].url_image3, list_image_result[0].url_image4].filter(product =>
-    //                 (e !== null && e?.length > 0)
-    //             );
-    //         console.log(listImageReturn);
+            const query1 =
+                `SELECT p.*,c.slug AS category_slug,pi.url_image1,pi.url_image2,pi.url_image3,pi.url_image4
+                FROM product AS p
+                JOIN product_image AS pi ON pi.product_id = p.id
+                JOIN category AS c ON c.id = p.category_id
+            WHERE p.id = ${mysql.escape(id)}`
+            console.log("dsdas");
+            console.log(query1)
+            const [err1, productResult] = await to(this.mysqlDb.poolQuery(query1))
+            console.log(productResult);
+            if (err1) {
+                logger.error(`[productService][getProductById] errors: `, err)
+                return reject(err)
+            }
+            if (!productResult.length) {
+                return reject(`product with id ${id} not found`)
+            }
 
-    //         const query1 =
-    //             `SELECT p.*,c.main_category_id
-    //         FROM product AS p
-    //         JOIN category AS c
-    //         ON c.id = p.category_id
-    //         JOIN main_category AS mc
-    //         ON mc.id = c.main_category_id
-    //         WHERE p.id = ${mysql.escape(id)}`
-    //         console.log("dsdas");
-    //         console.log(query1)
-    //         const [err1, productResult] = await to(this.mysqlDb.poolQuery(query1))
-    //         console.log(productResult);
-    //         if (err1) {
-    //             logger.error(`[productService][getProductById] errors: `, err)
-    //             return reject(err)
-    //         }
-    //         if (!productResult.length) {
-    //             return reject(`product with id ${id} not found`)
-    //         }
-
-    //         productResult[0].list_product_images = listImageReturn;
-    //         console.log(productResult[0])
-    //         return resolve(productResult[0])
-    //     })
-    // }
+            return resolve(this.returnProduct(productResult[0]))
+        })
+    }
     getProductsByCategorySlug(category_slug, productsPerPage, pageNumber, orderType, search) {
         return new Promise(
             async (resolve, reject) => {
@@ -189,7 +175,7 @@ class ProductService {
             ORDER BY p.create_at ${mysql.escape(orderByDb).split(`'`)[1]}
             LIMIT ${productsPerPage}
             OFFSET ${mysql.escape(offsetDb)}`
-            console.log(query)
+                console.log(query)
 
                 let [err, listProduct] = await to(this.mysqlDb.poolQuery(query))
                 if (err) {
@@ -233,12 +219,11 @@ class ProductService {
 
             }
 
-
         })
     }
     createProduct(name, description, detail, list_product_images, price, discount, category_id) {
         console.log(list_product_images)
-        const slug = createSlug(name) + Date.now();
+        const slug = createSlug(name);
         console.log('name: ', name);
         console.log('slug', slug);
         const url_image1 = list_product_images[0] ? list_product_images[0] : null;
@@ -279,7 +264,7 @@ class ProductService {
 
         })
     }
-    updateProduct(id,name,description,detail,list_product_images,price,discount,category_id,slug) {
+    updateProduct(id, name, description, detail, list_product_images, price, discount, category_id, slug) {
 
         return new Promise(async (resolve, reject) => {
             try {
@@ -374,19 +359,19 @@ class ProductService {
     }
     returnProduct = (e) => {
         console.log("???")
-            return {
-                "id": e.id,
-                "name": e.name,
-                "description": e.description,
-                "price": e.price,
-                "discount": e.discount,
-                "new_price": e.price - e.price * (e.discount / 100),
-                "category_id": e.category_id,
-                "slug": e.slug,
-                "create_at": e.create_at,
-                "update_at": e.update_at,
-                "list_product_images": [e.url_image1, e.url_image2, e.url_image3, e.url_image4].filter(e1 => (e1 !== null && e1?.length > 0))
-            }
+        return {
+            "id": e.id,
+            "name": e.name,
+            "description": e.description,
+            "price": e.price,
+            "discount": e.discount,
+            "new_price": e.price - e.price * (e.discount / 100),
+            "category_id": e.category_id,
+            "slug": e.slug,
+            "create_at": e.create_at,
+            "update_at": e.update_at,
+            "list_product_images": [e.url_image1, e.url_image2, e.url_image3, e.url_image4].filter(e1 => (e1 !== null && e1?.length > 0))
+        }
     }
 }
 

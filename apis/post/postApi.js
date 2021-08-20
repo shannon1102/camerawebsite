@@ -32,10 +32,20 @@ postApi.get('/:id', async (req, res, next) => {
         return res.status(500).json({status:500,message: error})
     }
 })
-postApi.get('/get-by-tag-id/:id', async (req, res, next) => {
+postApi.get('/get-by-slug/:slug', async (req, res, next) => {
     try {
-        let {id} = req.params
-        const postFounded = await postService.getPostByTagId(id)
+        let {slug} = req.params
+        const postFounded = await postService.getPostBySlug(slug)
+
+        return res.status(200).json({status:200,message:"Success",data:postFounded})
+    } catch (error) {
+        return res.status(500).json({status:500,message: error})
+    }
+})
+postApi.get('/get-by-tag-id/:tag_id', async (req, res, next) => {
+    try {
+        let {tag_id} = req.params
+        const postFounded = await postService.getPostByTagId(tag_id)
 
         return res.status(200).json({status:200,message:"Success",data:postFounded})
     } catch (error) {
@@ -52,13 +62,23 @@ postApi.get('/get-by-tag-name/:name', async (req, res, next) => {
         return res.status(500).json({status:500,message: error})
     }
 })
+postApi.get('/get-by-tag-slug/:tag_slug', async (req, res, next) => {
+    try {
+        let {tag_slug} = req.params
+        const postFounded = await postService.getPostByTagSlug(tag_slug)
+
+        return res.status(200).json({status:200,message:"Success",data:postFounded})
+    } catch (error) {
+        return res.status(500).json({status:500,message: error})
+    }
+})
 
 postApi.post('/',verifyToken,adminRole,
-    checkRequiredFieldInBody(['title', 'content','category_id']),
+    checkRequiredFieldInBody(['title', 'content','tag_id']),
     async (req, res, next) => {
         try {
-            let {title,image,description, content,category_id} = req.body
-            const insertedId = await postService.createPost(title,image,description, content,category_id)
+            let {title,url_image, content,tag_id} = req.body
+            const insertedId = await postService.createPost(title,url_image,content,tag_id)
 
             return res.status(200).json({status:200,message: 'Create new post successfully'})
         } catch (error) {
@@ -71,8 +91,8 @@ postApi.put('/:id',verifyToken,adminRole,
     async (req, res, next) => {
         let {id} = req.params
         try {
-            let {title,image,description, content,category_id} = req.body
-            await postService.updatePost(id, title,image,description, content,category_id)
+            let {title,url_image, content,tag_id} = req.body
+            await postService.updatePost(id, title,url_image, content,tag_id)
 
             return res.status(200).json({message: 'updated post successfully'})
         } catch (error) {

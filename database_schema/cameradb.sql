@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: localhost:3306
--- Thời gian đã tạo: Th8 20, 2021 lúc 11:46 AM
+-- Thời gian đã tạo: Th8 20, 2021 lúc 06:18 PM
 -- Phiên bản máy phục vụ: 8.0.23
 -- Phiên bản PHP: 7.4.3
 
@@ -43,7 +43,10 @@ CREATE TABLE `category` (
 
 INSERT INTO `category` (`id`, `name`, `description`, `create_at`, `update_at`, `slug`) VALUES
 (1, 'cate1', 'desc', '2021-08-20 10:37:34', '2021-08-20 10:37:34', 'hoavanhoavan'),
-(2, 'cate2', 'desc2', '2021-08-20 10:37:52', '2021-08-20 10:37:52', 'hoavanhoavanaloalo');
+(2, 'cate2', 'desc2', '2021-08-20 10:37:52', '2021-08-20 10:37:52', 'hoavanhoavanaloalo'),
+(3, 'string', 'string', '2021-08-20 13:35:57', '2021-08-20 13:35:57', ''),
+(8, 'string', 'string', '2021-08-20 16:35:19', '2021-08-20 16:35:19', 'string-1629452119986'),
+(10, 'string văn căn xxx @ [', '1', '2021-08-20 16:39:10', '2021-08-20 16:39:10', 'string-van-can-xxx-1629452525247');
 
 -- --------------------------------------------------------
 
@@ -73,9 +76,16 @@ CREATE TABLE `contact` (
 CREATE TABLE `hot_product` (
   `id` int NOT NULL,
   `product_id` int NOT NULL,
-  `create_at` datetime DEFAULT CURRENT_TIMESTAMP,
-  `update_at` datetime DEFAULT CURRENT_TIMESTAMP
+  `create_at` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `update_at` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Đang đổ dữ liệu cho bảng `hot_product`
+--
+
+INSERT INTO `hot_product` (`id`, `product_id`, `create_at`, `update_at`) VALUES
+(2, 6, '2021-08-20 13:02:39', '2021-08-20 13:02:39');
 
 -- --------------------------------------------------------
 
@@ -101,14 +111,21 @@ CREATE TABLE `inquiry` (
 
 CREATE TABLE `post` (
   `id` int NOT NULL,
-  `title` text NOT NULL,
-  `url_image` varchar(1000) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
-  `content` mediumint DEFAULT NULL,
+  `title` varchar(1000) NOT NULL,
+  `url_image` varchar(1000) DEFAULT NULL,
+  `content` mediumtext,
   `tag_id` int NOT NULL,
-  `create_at` datetime DEFAULT NULL,
-  `update_at` datetime DEFAULT NULL,
-  `slug` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL
+  `slug` varchar(500) NOT NULL,
+  `create_at` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `update_at` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Đang đổ dữ liệu cho bảng `post`
+--
+
+INSERT INTO `post` (`id`, `title`, `url_image`, `content`, `tag_id`, `slug`, `create_at`, `update_at`) VALUES
+(1, 'string', 'string', 'string', 1, 'string-1629458167721', '2021-08-20 18:16:07', '2021-08-20 18:16:07');
 
 -- --------------------------------------------------------
 
@@ -137,7 +154,9 @@ INSERT INTO `product` (`id`, `name`, `description`, `detail`, `price`, `discount
 (2, 'string', 'string', 'string', 11110, 20, 1, '2021-08-20 10:52:30', '2021-08-20 10:52:30', 'stringxxxxx3456'),
 (3, 'string3', 'string', 'string', 123000, 20, 1, '2021-08-20 11:00:38', '2021-08-20 11:00:38', 'string31629432038949'),
 (6, 'string3', 'string', 'string', 123000, 20, 1, '2021-08-20 11:03:07', '2021-08-20 11:03:07', 'string31629432187337'),
-(7, 'string3', 'string', 'string', 125000, 23, 1, '2021-08-20 11:03:23', '2021-08-20 11:03:23', 'string31629432203857');
+(7, 'string3', 'string', 'string', 125000, 23, 1, '2021-08-20 11:03:23', '2021-08-20 11:03:23', 'string31629432203857'),
+(8, 'string sgsg aAddd@ aawă  ád', 'string', 'string', 1110, 10, 1, '2021-08-20 13:37:30', '2021-08-20 13:37:30', 'string-sgsg-aaddd-aawa-ad1629441450901'),
+(9, 'string sgsg aAddd@ aawă  ád', 'string', 'string', 1110, 10, 1, '2021-08-20 13:44:35', '2021-08-20 13:44:35', 'string-sgsg-aaddd-aawa-ad1629441875266');
 
 -- --------------------------------------------------------
 
@@ -164,7 +183,9 @@ INSERT INTO `product_image` (`id`, `product_id`, `url_image1`, `url_image2`, `ur
 (3, 3, 'string', NULL, NULL, NULL),
 (4, 4, 'string', NULL, NULL, NULL),
 (5, 6, 'string', NULL, NULL, NULL),
-(6, 7, 'string', NULL, NULL, NULL);
+(6, 7, 'string', NULL, NULL, NULL),
+(7, 8, 'string', NULL, NULL, NULL),
+(8, 9, 'string', NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -174,9 +195,19 @@ INSERT INTO `product_image` (`id`, `product_id`, `url_image1`, `url_image2`, `ur
 
 CREATE TABLE `tag` (
   `id` int NOT NULL,
-  `name` int NOT NULL,
-  `slug` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL
+  `name` varchar(1000) NOT NULL,
+  `slug` varchar(1000) NOT NULL,
+  `create_at` datetime DEFAULT CURRENT_TIMESTAMP,
+  `update_at` datetime DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Đang đổ dữ liệu cho bảng `tag`
+--
+
+INSERT INTO `tag` (`id`, `name`, `slug`, `create_at`, `update_at`) VALUES
+(1, 'string asdada 3442 WE@', 'string-asdada-3442-we-1629458120088', '2021-08-20 18:15:20', '2021-08-20 18:15:20'),
+(3, 'string asdada 3442 WE@', 'string-asdada-3442-we-1629458124766', '2021-08-20 18:15:24', '2021-08-20 18:15:24');
 
 -- --------------------------------------------------------
 
@@ -220,6 +251,7 @@ ALTER TABLE `contact`
 -- Chỉ mục cho bảng `hot_product`
 --
 ALTER TABLE `hot_product`
+  ADD PRIMARY KEY (`id`),
   ADD KEY `product_id` (`product_id`);
 
 --
@@ -234,7 +266,6 @@ ALTER TABLE `inquiry`
 --
 ALTER TABLE `post`
   ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `update_at` (`update_at`),
   ADD KEY `tag_id` (`tag_id`);
 
 --
@@ -255,8 +286,7 @@ ALTER TABLE `product_image`
 -- Chỉ mục cho bảng `tag`
 --
 ALTER TABLE `tag`
-  ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `slug` (`slug`);
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Chỉ mục cho bảng `user`
@@ -272,13 +302,19 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT cho bảng `category`
 --
 ALTER TABLE `category`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT cho bảng `contact`
 --
 ALTER TABLE `contact`
   MODIFY `id` int NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT cho bảng `hot_product`
+--
+ALTER TABLE `hot_product`
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT cho bảng `inquiry`
@@ -290,19 +326,25 @@ ALTER TABLE `inquiry`
 -- AUTO_INCREMENT cho bảng `post`
 --
 ALTER TABLE `post`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT cho bảng `product`
 --
 ALTER TABLE `product`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT cho bảng `product_image`
 --
 ALTER TABLE `product_image`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+
+--
+-- AUTO_INCREMENT cho bảng `tag`
+--
+ALTER TABLE `tag`
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT cho bảng `user`

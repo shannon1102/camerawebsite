@@ -23,10 +23,12 @@ class HotProductService {
                     orderByDb = 'DESC'
                 }
                 const query =
-                    `SELECT p.* FROM product as p  JOIN hot_product as hp
-                    ON p.id = hp.product_id 
+                    `SELECT p.*,pi.url_image1,pi.url_image2,pi.url_image3,pi.url_image4
+                    FROM product as p  
+                    JOIN hot_product as hp ON p.id = hp.product_id 
+                    JOIN product_image as pi ON pi.product_id = p.id
                     WHERE 
-                    (p.title LIKE ${mysql.escape('%' + search + '%')}
+                    (p.name LIKE ${mysql.escape('%' + search + '%')}
                     OR p.description LIKE ${mysql.escape('%' + search + '%')})
                     ORDER BY hp.create_at ${mysql.escape(orderByDb).split(`'`)[1]}
                     LIMIT ${productsPerPage}
@@ -37,7 +39,7 @@ class HotProductService {
                     logger.error(`[hotProductService][getHotProducts] errors : `, err)
                     return reject(err)
                 } else {
-                    return resolve(listProduct)
+                    return resolve(this.returnListProduct(listProduct))
                 }
 
             });
@@ -46,6 +48,7 @@ class HotProductService {
     setHotProduct(product_id) {
         return new Promise(async (resolve, reject) => {
             try {
+               
                 const getQuery = `SELECT * FROM hot_product 
               WHERE product_id = ${mysql.escape(product_id)}`
 
@@ -56,8 +59,9 @@ class HotProductService {
                 }
 
                 const query = `INSERT INTO hot_product(product_id) 
-                VALUES (${mysql.escape(product_id)})
-                `
+                VALUES (${mysql.escape(product_id)})`
+                console.log(query);
+                console.log("????????")
                 const [err2, result] = await to(this.mysqlDb.poolQuery(query))
                 if (err2) {
                     logger.error(`[hotProductService][createHotProduct] errors: `, err)
@@ -92,6 +96,23 @@ class HotProductService {
                 logger.error(`[hotProductService][deleteHotProduct] errors: `, err)
                 await this.mysqlDb.rollback()
                 return reject(err.sqlMessage)
+            }
+        })
+    }
+    returnListProduct = (listProduct) => {
+        return listProduct.map(e => {
+            return {
+                "id": e.id,
+                "name": e.name,
+                "description": e.description,
+                "price": e.price,
+                "discount": e.discount,
+                "new_price": e.price - e.price * (e.discount / 100),
+                "category_id": e.category_id,
+                "slug": e.slug,
+                "create_at": e.create_at,
+                "update_at": e.update_at,
+                "list_product_images": [e.url_image1, e.url_image2, e.url_image3, e.url_image4].filter(e1 => (e1 !== null && e1?.length > 0))
             }
         })
     }

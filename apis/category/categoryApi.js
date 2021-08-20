@@ -45,6 +45,23 @@ categoryApi.get('/:id', async (req, res, next) => {
         })
     }
 })
+categoryApi.get('/get-by-slug/:slug', async (req, res, next) => {
+    try {
+        let { slug } = req.params
+        const categoryFounded = await categoryService.getCategoryBySlug(slug)
+
+        return res.status(200).json({
+            status: 200,
+            message: "Success",
+            data: categoryFounded
+        })
+    } catch (error) {
+        return res.status(500).json({
+            status: 500,
+            message: error
+        })
+    }
+})
 
 categoryApi.post('/', verifyToken, adminRole,
     checkRequiredFieldInBody(['name']),

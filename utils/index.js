@@ -35,7 +35,7 @@ const createSlug = (str) => {
 
     }))
 
-    return newStr
+    return newStr + '-' + Date.now()
 
 }
 module.exports = Object.assign({}, {createSlug})
