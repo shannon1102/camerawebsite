@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: localhost:3306
--- Thời gian đã tạo: Th8 20, 2021 lúc 06:18 PM
+-- Thời gian đã tạo: Th8 20, 2021 lúc 10:37 PM
 -- Phiên bản máy phục vụ: 8.0.23
 -- Phiên bản PHP: 7.4.3
 
@@ -96,12 +96,24 @@ INSERT INTO `hot_product` (`id`, `product_id`, `create_at`, `update_at`) VALUES
 CREATE TABLE `inquiry` (
   `id` int NOT NULL,
   `customer_name` varchar(255) NOT NULL,
+  `email` varchar(255) DEFAULT NULL,
   `phone` varchar(100) NOT NULL,
   `product_id` int NOT NULL,
   `message` text NOT NULL,
   `create_at` datetime DEFAULT CURRENT_TIMESTAMP,
-  `update_at` datetime DEFAULT CURRENT_TIMESTAMP
+  `update_at` datetime DEFAULT CURRENT_TIMESTAMP,
+  `product_name` varchar(1000) DEFAULT NULL,
+  `product_link` varchar(1000) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Đang đổ dữ liệu cho bảng `inquiry`
+--
+
+INSERT INTO `inquiry` (`id`, `customer_name`, `email`, `phone`, `product_id`, `message`, `create_at`, `update_at`, `product_name`, `product_link`) VALUES
+(3, 'string', 'string', 'string', 2, 'string', '2021-08-20 22:29:46', '2021-08-20 22:29:46', 'string', 'string'),
+(4, 'string', 'string', 'string', 2, 'string', '2021-08-20 22:31:29', '2021-08-20 22:31:29', 'string', 'string'),
+(5, 'string', 'string', 'string', 2, 'string', '2021-08-20 22:32:21', '2021-08-20 22:32:21', 'string', 'string');
 
 -- --------------------------------------------------------
 
@@ -125,7 +137,8 @@ CREATE TABLE `post` (
 --
 
 INSERT INTO `post` (`id`, `title`, `url_image`, `content`, `tag_id`, `slug`, `create_at`, `update_at`) VALUES
-(1, 'string', 'string', 'string', 1, 'string-1629458167721', '2021-08-20 18:16:07', '2021-08-20 18:16:07');
+(1, 'string', 'string', 'string', 1, 'string-1629458167721', '2021-08-20 18:16:07', '2021-08-20 18:16:07'),
+(5, 'string dfdsfsfds', 'string', 'string', 5, 'string-dfdsfsfds-1629469626500', '2021-08-20 21:27:06', '2021-08-20 21:27:06');
 
 -- --------------------------------------------------------
 
@@ -207,7 +220,8 @@ CREATE TABLE `tag` (
 
 INSERT INTO `tag` (`id`, `name`, `slug`, `create_at`, `update_at`) VALUES
 (1, 'string asdada 3442 WE@', 'string-asdada-3442-we-1629458120088', '2021-08-20 18:15:20', '2021-08-20 18:15:20'),
-(3, 'string asdada 3442 WE@', 'string-asdada-3442-we-1629458124766', '2021-08-20 18:15:24', '2021-08-20 18:15:24');
+(3, 'string okla anananf', 'string-okla-anananf-1629469359509', '2021-08-20 18:15:24', '2021-08-20 18:15:24'),
+(5, 'string ###yy %% 22@', 'string-###yy-percentpercent-22-1629469374758', '2021-08-20 21:22:54', '2021-08-20 21:22:54');
 
 -- --------------------------------------------------------
 
@@ -320,13 +334,13 @@ ALTER TABLE `hot_product`
 -- AUTO_INCREMENT cho bảng `inquiry`
 --
 ALTER TABLE `inquiry`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT cho bảng `post`
 --
 ALTER TABLE `post`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT cho bảng `product`
@@ -344,7 +358,7 @@ ALTER TABLE `product_image`
 -- AUTO_INCREMENT cho bảng `tag`
 --
 ALTER TABLE `tag`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT cho bảng `user`
