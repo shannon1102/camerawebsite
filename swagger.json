@@ -1486,6 +1486,43 @@
         }
       }
     },
+    "/tag/get-by-slug/{slug}": {
+      "get": {
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "slug",
+            "type": "string",
+            "in": "path",
+            "required": true
+          }
+        ],
+        "tags": [
+          "Tag Api"
+        ],
+        "summary": "Get tag by Slug",
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "success",
+            "schema": {
+              "$ref": "#/definitions/tag"
+            }
+          },
+          "500": {
+            "description": "error",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          }
+        }
+      }
+    },
     "/contact/": {
       "get": {
         "consumes": [
@@ -1837,9 +1874,6 @@
                 },
                 "product_link": {
                   "type": "string"
-                },
-                "quantity": {
-                  "type": "integer"
                 }
               }
             }
@@ -2329,9 +2363,6 @@
           "type": "string"
         },
         "product_id": {
-          "type": "integer"
-        },
-        "quantity": {
           "type": "integer"
         }
       }

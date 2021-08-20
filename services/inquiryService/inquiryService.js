@@ -80,8 +80,8 @@ class InquiryService {
     createInquiry(customer_name,email,phone,message,product_name,product_id,product_link,quantity) {
         return new Promise(async (resolve, reject) => {
             const query = `
-                INSERT INTO inquiry(customer_name,email,phone,message,product_name,product_id,product_link,quantity)
-                VALUES(${mysql.escape(customer_name)},${mysql.escape(email)},${mysql.escape(phone)},${mysql.escape(message)},${mysql.escape(product_name)},${mysql.escape(product_id)},${mysql.escape(product_link)},${mysql.escape(quantity)})
+                INSERT INTO inquiry(customer_name,email,phone,message,product_name,product_id,product_link)
+                VALUES(${mysql.escape(customer_name)},${mysql.escape(email)},${mysql.escape(phone)},${mysql.escape(message)},${mysql.escape(product_name)},${mysql.escape(product_id)},${mysql.escape(product_link)})
             `
             console.log(query)
             const [err, result] = await to(this.mysqlDb.poolQuery(query))
@@ -99,7 +99,6 @@ class InquiryService {
                 product_name: product_name ? product_name : "No information",
                 product_id: product_id ? product_id : -1,
                 product_link: product_link ? product_link : "No information",
-                quantity: quantity ? quantity : 1 ,
             }
             await emailService.sendEmail(payload);
             if(err) {

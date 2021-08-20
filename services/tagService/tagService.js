@@ -41,7 +41,7 @@ class TagService {
 
         })
     }
-    gettagById(id) {
+    getTagById(id) {
         return new Promise(async (resolve, reject) => {
             try {  
                 const query2 = `
@@ -65,7 +65,7 @@ class TagService {
 
         })
     }
-    gettagBySlug(slug) {
+    getTagBySlug(slug) {
         return new Promise(async (resolve, reject) => {
             try {  
                 const query2 = `
