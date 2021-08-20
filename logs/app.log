@@ -4157,3 +4157,305 @@
 2021-08-19T22:53:33+07:00 info: '::1 - - [19/Aug/2021:15:53:33 +0000] "GET /api/api-docs/swagger-ui-bundle.js HTTP/1.1" 304 - "http://localhost:5000/api/api-docs/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.131 Safari/537.36"\n'
 2021-08-19T22:53:33+07:00 info: '::1 - - [19/Aug/2021:15:53:33 +0000] "GET /api/api-docs/swagger-ui-standalone-preset.js HTTP/1.1" 304 - "http://localhost:5000/api/api-docs/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.131 Safari/537.36"\n'
 2021-08-19T22:53:34+07:00 info: '::1 - - [19/Aug/2021:15:53:34 +0000] "GET /api/api-docs/favicon-32x32.png HTTP/1.1" 304 - "http://localhost:5000/api/api-docs/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.131 Safari/537.36"\n'
+2021-08-20T10:15:15+07:00 error: "uncaughtException: Identifier 'require' has already been declared\n" +
+  '/home/dalang/CamWebsite/apis/product/productApi.js:10\n' +
+  "const { require } = require('app-root-path');\n" +
+  '        ^\n' +
+  '\n' +
+  "SyntaxError: Identifier 'require' has already been declared\n" +
+  '    at wrapSafe (internal/modules/cjs/loader.js:979:16)\n' +
+  '    at Module._compile (internal/modules/cjs/loader.js:1027:27)\n' +
+  '    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)\n' +
+  '    at Module.load (internal/modules/cjs/loader.js:928:32)\n' +
+  '    at Function.Module._load (internal/modules/cjs/loader.js:769:14)\n' +
+  '    at Module.require (internal/modules/cjs/loader.js:952:19)\n' +
+  '    at require (internal/modules/cjs/helpers.js:88:18)\n' +
+  '    at Object.<anonymous> (/home/dalang/CamWebsite/server.js:24:20)\n' +
+  '    at Module._compile (internal/modules/cjs/loader.js:1063:30)\n' +
+  '    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)'
+2021-08-20T10:15:45+07:00 error: "uncaughtException: Identifier 'require' has already been declared\n" +
+  '/home/dalang/CamWebsite/services/productService/productService.js:6\n' +
+  "const { require } = require('app-root-path');\n" +
+  '        ^\n' +
+  '\n' +
+  "SyntaxError: Identifier 'require' has already been declared\n" +
+  '    at wrapSafe (internal/modules/cjs/loader.js:979:16)\n' +
+  '    at Module._compile (internal/modules/cjs/loader.js:1027:27)\n' +
+  '    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)\n' +
+  '    at Module.load (internal/modules/cjs/loader.js:928:32)\n' +
+  '    at Function.Module._load (internal/modules/cjs/loader.js:769:14)\n' +
+  '    at Module.require (internal/modules/cjs/loader.js:952:19)\n' +
+  '    at require (internal/modules/cjs/helpers.js:88:18)\n' +
+  '    at Object.<anonymous> (/home/dalang/CamWebsite/apis/product/productApi.js:4:24)\n' +
+  '    at Module._compile (internal/modules/cjs/loader.js:1063:30)\n' +
+  '    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)'
+2021-08-20T10:15:59+07:00 error: "uncaughtException: Identifier 'require' has already been declared\n" +
+  '/home/dalang/CamWebsite/utils/index.js:1\n' +
+  'const { require } = require("app-root-path");\n' +
+  '        ^\n' +
+  '\n' +
+  "SyntaxError: Identifier 'require' has already been declared\n" +
+  '    at wrapSafe (internal/modules/cjs/loader.js:979:16)\n' +
+  '    at Module._compile (internal/modules/cjs/loader.js:1027:27)\n' +
+  '    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)\n' +
+  '    at Module.load (internal/modules/cjs/loader.js:928:32)\n' +
+  '    at Function.Module._load (internal/modules/cjs/loader.js:769:14)\n' +
+  '    at Module.require (internal/modules/cjs/loader.js:952:19)\n' +
+  '    at require (internal/modules/cjs/helpers.js:88:18)\n' +
+  '    at Object.<anonymous> (/home/dalang/CamWebsite/services/productService/productService.js:6:22)\n' +
+  '    at Module._compile (internal/modules/cjs/loader.js:1063:30)\n' +
+  '    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)'
+2021-08-20T10:16:18+07:00 error: "uncaughtException: Identifier 'slugify' has already been declared\n" +
+  '/home/dalang/CamWebsite/utils/index.js:4\n' +
+  "const slugify = require('slugify')\n" +
+  '      ^\n' +
+  '\n' +
+  "SyntaxError: Identifier 'slugify' has already been declared\n" +
+  '    at wrapSafe (internal/modules/cjs/loader.js:979:16)\n' +
+  '    at Module._compile (internal/modules/cjs/loader.js:1027:27)\n' +
+  '    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)\n' +
+  '    at Module.load (internal/modules/cjs/loader.js:928:32)\n' +
+  '    at Function.Module._load (internal/modules/cjs/loader.js:769:14)\n' +
+  '    at Module.require (internal/modules/cjs/loader.js:952:19)\n' +
+  '    at require (internal/modules/cjs/helpers.js:88:18)\n' +
+  '    at Object.<anonymous> (/home/dalang/CamWebsite/services/productService/productService.js:6:22)\n' +
+  '    at Module._compile (internal/modules/cjs/loader.js:1063:30)\n' +
+  '    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)'
+2021-08-20T10:17:09+07:00 info: '::1 - - [20/Aug/2021:03:17:09 +0000] "GET /api/api-docs/ HTTP/1.1" 304 - "-" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"\n'
+2021-08-20T10:17:09+07:00 info: '::1 - - [20/Aug/2021:03:17:09 +0000] "GET /api/api-docs/swagger-ui-init.js HTTP/1.1" 200 60378 "http://localhost:5000/api/api-docs/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"\n'
+2021-08-20T10:17:09+07:00 info: '::1 - - [20/Aug/2021:03:17:09 +0000] "GET /api/api-docs/swagger-ui.css HTTP/1.1" 200 143669 "http://localhost:5000/api/api-docs/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"\n'
+2021-08-20T10:17:09+07:00 info: '::1 - - [20/Aug/2021:03:17:09 +0000] "GET /api/api-docs/swagger-ui-standalone-preset.js HTTP/1.1" 200 338084 "http://localhost:5000/api/api-docs/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"\n'
+2021-08-20T10:17:09+07:00 info: '::1 - - [20/Aug/2021:03:17:09 +0000] "GET /api/api-docs/swagger-ui-bundle.js HTTP/1.1" 200 1100495 "http://localhost:5000/api/api-docs/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"\n'
+2021-08-20T10:17:09+07:00 info: '::1 - - [20/Aug/2021:03:17:09 +0000] "GET /api/api-docs/favicon-32x32.png HTTP/1.1" 304 - "http://localhost:5000/api/api-docs/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"\n'
+2021-08-20T10:17:36+07:00 info: '::1 - - [20/Aug/2021:03:17:36 +0000] "GET /api/api-docs/ HTTP/1.1" 304 - "-" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"\n'
+2021-08-20T10:17:36+07:00 info: '::1 - - [20/Aug/2021:03:17:36 +0000] "GET /api/api-docs/swagger-ui.css HTTP/1.1" 304 - "http://localhost:5000/api/api-docs/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"\n'
+2021-08-20T10:17:36+07:00 info: '::1 - - [20/Aug/2021:03:17:36 +0000] "GET /api/api-docs/swagger-ui-bundle.js HTTP/1.1" 304 - "http://localhost:5000/api/api-docs/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"\n'
+2021-08-20T10:17:36+07:00 info: '::1 - - [20/Aug/2021:03:17:36 +0000] "GET /api/api-docs/swagger-ui-standalone-preset.js HTTP/1.1" 304 - "http://localhost:5000/api/api-docs/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"\n'
+2021-08-20T10:17:36+07:00 info: '::1 - - [20/Aug/2021:03:17:36 +0000] "GET /api/api-docs/swagger-ui-init.js HTTP/1.1" 200 60360 "http://localhost:5000/api/api-docs/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"\n'
+2021-08-20T10:17:37+07:00 info: '::1 - - [20/Aug/2021:03:17:37 +0000] "GET /api/api-docs/favicon-32x32.png HTTP/1.1" 200 628 "http://localhost:5000/api/api-docs/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"\n'
+2021-08-20T10:20:00+07:00 info: '::1 - - [20/Aug/2021:03:20:00 +0000] "GET /api/product/ HTTP/1.1" 200 44 "http://localhost:5000/api/api-docs/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"\n'
+2021-08-20T10:20:52+07:00 error: "[userService][checkEmail] err: Error: ER_NO_SUCH_TABLE: Table 'cameradb.user' doesn't exist"
+2021-08-20T10:20:52+07:00 info: '::1 - - [20/Aug/2021:03:20:52 +0000] "POST /api/user/signup HTTP/1.1" 501 89 "http://localhost:5000/api/api-docs/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"\n'
+2021-08-20T10:22:13+07:00 info: '::1 - - [20/Aug/2021:03:22:13 +0000] "POST /api/user/signup HTTP/1.1" 200 217 "http://localhost:5000/api/api-docs/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"\n'
+2021-08-20T10:23:55+07:00 info: '::1 - - [20/Aug/2021:03:23:55 +0000] "GET /api/api-docs/ HTTP/1.1" 304 - "-" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"\n'
+2021-08-20T10:23:55+07:00 info: '::1 - - [20/Aug/2021:03:23:55 +0000] "GET /api/api-docs/swagger-ui.css HTTP/1.1" 304 - "http://localhost:5000/api/api-docs/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"\n'
+2021-08-20T10:23:55+07:00 info: '::1 - - [20/Aug/2021:03:23:55 +0000] "GET /api/api-docs/swagger-ui-bundle.js HTTP/1.1" 304 - "http://localhost:5000/api/api-docs/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"\n'
+2021-08-20T10:23:55+07:00 info: '::1 - - [20/Aug/2021:03:23:55 +0000] "GET /api/api-docs/swagger-ui-standalone-preset.js HTTP/1.1" 304 - "http://localhost:5000/api/api-docs/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"\n'
+2021-08-20T10:23:55+07:00 info: '::1 - - [20/Aug/2021:03:23:55 +0000] "GET /api/api-docs/swagger-ui-init.js HTTP/1.1" 200 60365 "http://localhost:5000/api/api-docs/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"\n'
+2021-08-20T10:23:55+07:00 info: '::1 - - [20/Aug/2021:03:23:55 +0000] "GET /api/api-docs/favicon-32x32.png HTTP/1.1" 304 - "http://localhost:5000/api/api-docs/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"\n'
+2021-08-20T10:25:57+07:00 error: 'uncaughtException: /home/dalang/CamWebsite/swagger.json: Unexpected token } in JSON at position 10600\n' +
+  'SyntaxError: /home/dalang/CamWebsite/swagger.json: Unexpected token } in JSON at position 10600\n' +
+  '    at parse (<anonymous>)\n' +
+  '    at Object.Module._extensions..json (internal/modules/cjs/loader.js:1106:22)\n' +
+  '    at Module.load (internal/modules/cjs/loader.js:928:32)\n' +
+  '    at Function.Module._load (internal/modules/cjs/loader.js:769:14)\n' +
+  '    at Module.require (internal/modules/cjs/loader.js:952:19)\n' +
+  '    at require (internal/modules/cjs/helpers.js:88:18)\n' +
+  '    at Object.<anonymous> (/home/dalang/CamWebsite/server.js:43:25)\n' +
+  '    at Module._compile (internal/modules/cjs/loader.js:1063:30)\n' +
+  '    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)\n' +
+  '    at Module.load (internal/modules/cjs/loader.js:928:32)'
+2021-08-20T10:26:14+07:00 info: '::1 - - [20/Aug/2021:03:26:14 +0000] "GET /api/api-docs/ HTTP/1.1" 304 - "-" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"\n'
+2021-08-20T10:26:14+07:00 info: '::1 - - [20/Aug/2021:03:26:14 +0000] "GET /api/api-docs/swagger-ui.css HTTP/1.1" 304 - "http://localhost:5000/api/api-docs/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"\n'
+2021-08-20T10:26:14+07:00 info: '::1 - - [20/Aug/2021:03:26:14 +0000] "GET /api/api-docs/swagger-ui-init.js HTTP/1.1" 200 60496 "http://localhost:5000/api/api-docs/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"\n'
+2021-08-20T10:26:14+07:00 info: '::1 - - [20/Aug/2021:03:26:14 +0000] "GET /api/api-docs/swagger-ui-bundle.js HTTP/1.1" 304 - "http://localhost:5000/api/api-docs/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"\n'
+2021-08-20T10:26:14+07:00 info: '::1 - - [20/Aug/2021:03:26:14 +0000] "GET /api/api-docs/swagger-ui-standalone-preset.js HTTP/1.1" 304 - "http://localhost:5000/api/api-docs/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"\n'
+2021-08-20T10:26:15+07:00 info: '::1 - - [20/Aug/2021:03:26:15 +0000] "GET /api/api-docs/favicon-32x32.png HTTP/1.1" 304 - "http://localhost:5000/api/api-docs/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"\n'
+2021-08-20T10:26:25+07:00 info: '::1 - - [20/Aug/2021:03:26:25 +0000] "GET /api/api-docs/ HTTP/1.1" 304 - "-" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"\n'
+2021-08-20T10:26:26+07:00 info: '::1 - - [20/Aug/2021:03:26:26 +0000] "GET /api/api-docs/swagger-ui.css HTTP/1.1" 304 - "http://localhost:5000/api/api-docs/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"\n'
+2021-08-20T10:26:26+07:00 info: '::1 - - [20/Aug/2021:03:26:26 +0000] "GET /api/api-docs/swagger-ui-bundle.js HTTP/1.1" 304 - "http://localhost:5000/api/api-docs/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"\n'
+2021-08-20T10:26:26+07:00 info: '::1 - - [20/Aug/2021:03:26:26 +0000] "GET /api/api-docs/swagger-ui-init.js HTTP/1.1" 200 60495 "http://localhost:5000/api/api-docs/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"\n'
+2021-08-20T10:26:26+07:00 info: '::1 - - [20/Aug/2021:03:26:26 +0000] "GET /api/api-docs/swagger-ui-standalone-preset.js HTTP/1.1" 304 - "http://localhost:5000/api/api-docs/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"\n'
+2021-08-20T10:26:26+07:00 info: '::1 - - [20/Aug/2021:03:26:26 +0000] "GET /api/api-docs/favicon-32x32.png HTTP/1.1" 304 - "http://localhost:5000/api/api-docs/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"\n'
+2021-08-20T10:33:42+07:00 info: '::1 - - [20/Aug/2021:03:33:42 +0000] "POST /api/user/login HTTP/1.1" 200 207 "http://localhost:5000/api/api-docs/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"\n'
+2021-08-20T10:38:27+07:00 info: '::1 - - [20/Aug/2021:03:38:27 +0000] "GET /api/api-docs/ HTTP/1.1" 304 - "-" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"\n'
+2021-08-20T10:38:27+07:00 info: '::1 - - [20/Aug/2021:03:38:27 +0000] "GET /api/api-docs/swagger-ui.css HTTP/1.1" 304 - "http://localhost:5000/api/api-docs/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"\n'
+2021-08-20T10:38:27+07:00 info: '::1 - - [20/Aug/2021:03:38:27 +0000] "GET /api/api-docs/swagger-ui-bundle.js HTTP/1.1" 304 - "http://localhost:5000/api/api-docs/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"\n'
+2021-08-20T10:38:27+07:00 info: '::1 - - [20/Aug/2021:03:38:27 +0000] "GET /api/api-docs/swagger-ui-standalone-preset.js HTTP/1.1" 304 - "http://localhost:5000/api/api-docs/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"\n'
+2021-08-20T10:38:27+07:00 info: '::1 - - [20/Aug/2021:03:38:27 +0000] "GET /api/api-docs/swagger-ui-init.js HTTP/1.1" 200 60495 "http://localhost:5000/api/api-docs/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"\n'
+2021-08-20T10:38:28+07:00 info: '::1 - - [20/Aug/2021:03:38:28 +0000] "GET /api/api-docs/favicon-32x32.png HTTP/1.1" 304 - "http://localhost:5000/api/api-docs/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"\n'
+2021-08-20T10:39:46+07:00 info: '::1 - - [20/Aug/2021:03:39:46 +0000] "GET /api/api-docs/ HTTP/1.1" 304 - "-" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"\n'
+2021-08-20T10:39:46+07:00 info: '::1 - - [20/Aug/2021:03:39:46 +0000] "GET /api/api-docs/swagger-ui.css HTTP/1.1" 304 - "http://localhost:5000/api/api-docs/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"\n'
+2021-08-20T10:39:46+07:00 info: '::1 - - [20/Aug/2021:03:39:46 +0000] "GET /api/api-docs/swagger-ui-bundle.js HTTP/1.1" 304 - "http://localhost:5000/api/api-docs/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"\n'
+2021-08-20T10:39:46+07:00 info: '::1 - - [20/Aug/2021:03:39:46 +0000] "GET /api/api-docs/swagger-ui-standalone-preset.js HTTP/1.1" 304 - "http://localhost:5000/api/api-docs/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"\n'
+2021-08-20T10:39:46+07:00 info: '::1 - - [20/Aug/2021:03:39:46 +0000] "GET /api/api-docs/swagger-ui-init.js HTTP/1.1" 200 60496 "http://localhost:5000/api/api-docs/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"\n'
+2021-08-20T10:39:47+07:00 info: '::1 - - [20/Aug/2021:03:39:47 +0000] "GET /api/api-docs/favicon-32x32.png HTTP/1.1" 304 - "http://localhost:5000/api/api-docs/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"\n'
+2021-08-20T10:40:05+07:00 error: "Bad request.You don't have permission"
+2021-08-20T10:40:05+07:00 info: '::1 - - [20/Aug/2021:03:40:05 +0000] "POST /api/product/ HTTP/1.1" 401 43 "http://localhost:5000/api/api-docs/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"\n'
+2021-08-20T10:40:19+07:00 info: '::1 - - [20/Aug/2021:03:40:19 +0000] "POST /api/user/signup HTTP/1.1" 501 58 "http://localhost:5000/api/api-docs/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"\n'
+2021-08-20T10:43:01+07:00 info: '::1 - - [20/Aug/2021:03:43:01 +0000] "POST /api/user/login HTTP/1.1" 500 31 "http://localhost:5000/api/api-docs/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"\n'
+2021-08-20T10:43:21+07:00 info: '::1 - - [20/Aug/2021:03:43:21 +0000] "POST /api/user/login HTTP/1.1" 500 31 "http://localhost:5000/api/api-docs/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"\n'
+2021-08-20T10:43:52+07:00 info: '::1 - - [20/Aug/2021:03:43:52 +0000] "POST /api/user/signup HTTP/1.1" 200 217 "http://localhost:5000/api/api-docs/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"\n'
+2021-08-20T10:43:58+07:00 info: '::1 - - [20/Aug/2021:03:43:58 +0000] "GET /api/api-docs/ HTTP/1.1" 304 - "-" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"\n'
+2021-08-20T10:43:58+07:00 info: '::1 - - [20/Aug/2021:03:43:58 +0000] "GET /api/api-docs/swagger-ui.css HTTP/1.1" 304 - "http://localhost:5000/api/api-docs/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"\n'
+2021-08-20T10:43:58+07:00 info: '::1 - - [20/Aug/2021:03:43:58 +0000] "GET /api/api-docs/swagger-ui-bundle.js HTTP/1.1" 304 - "http://localhost:5000/api/api-docs/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"\n'
+2021-08-20T10:43:58+07:00 info: '::1 - - [20/Aug/2021:03:43:58 +0000] "GET /api/api-docs/swagger-ui-standalone-preset.js HTTP/1.1" 304 - "http://localhost:5000/api/api-docs/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"\n'
+2021-08-20T10:43:58+07:00 info: '::1 - - [20/Aug/2021:03:43:58 +0000] "GET /api/api-docs/swagger-ui-init.js HTTP/1.1" 304 - "http://localhost:5000/api/api-docs/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"\n'
+2021-08-20T10:43:59+07:00 info: '::1 - - [20/Aug/2021:03:43:59 +0000] "GET /api/api-docs/favicon-32x32.png HTTP/1.1" 304 - "http://localhost:5000/api/api-docs/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"\n'
+2021-08-20T10:44:04+07:00 info: '::1 - - [20/Aug/2021:03:44:04 +0000] "POST /api/user/login HTTP/1.1" 200 207 "http://localhost:5000/api/api-docs/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"\n'
+2021-08-20T10:45:08+07:00 info: '::1 - - [20/Aug/2021:03:45:08 +0000] "POST /api/user/login HTTP/1.1" 200 207 "http://localhost:5000/api/api-docs/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"\n'
+2021-08-20T10:45:34+07:00 info: '::1 - - [20/Aug/2021:03:45:34 +0000] "POST /api/product/ HTTP/1.1" 500 34 "http://localhost:5000/api/api-docs/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"\n'
+2021-08-20T10:46:02+07:00 error: "500 - Cannot read property '0' of undefined - /api/product/ -POST - ::1"
+2021-08-20T10:46:02+07:00 info: '::1 - - [20/Aug/2021:03:46:02 +0000] "POST /api/product/ HTTP/1.1" 500 2 "http://localhost:5000/api/api-docs/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"\n'
+2021-08-20T10:48:35+07:00 info: '::1 - - [20/Aug/2021:03:48:35 +0000] "GET /api/api-docs/ HTTP/1.1" 304 - "-" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"\n'
+2021-08-20T10:48:35+07:00 info: '::1 - - [20/Aug/2021:03:48:35 +0000] "GET /api/api-docs/swagger-ui.css HTTP/1.1" 304 - "http://localhost:5000/api/api-docs/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"\n'
+2021-08-20T10:48:35+07:00 info: '::1 - - [20/Aug/2021:03:48:35 +0000] "GET /api/api-docs/swagger-ui-bundle.js HTTP/1.1" 304 - "http://localhost:5000/api/api-docs/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"\n'
+2021-08-20T10:48:35+07:00 info: '::1 - - [20/Aug/2021:03:48:35 +0000] "GET /api/api-docs/swagger-ui-init.js HTTP/1.1" 200 60748 "http://localhost:5000/api/api-docs/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"\n'
+2021-08-20T10:48:35+07:00 info: '::1 - - [20/Aug/2021:03:48:35 +0000] "GET /api/api-docs/swagger-ui-standalone-preset.js HTTP/1.1" 304 - "http://localhost:5000/api/api-docs/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"\n'
+2021-08-20T10:48:36+07:00 info: '::1 - - [20/Aug/2021:03:48:36 +0000] "GET /api/api-docs/favicon-32x32.png HTTP/1.1" 304 - "http://localhost:5000/api/api-docs/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"\n'
+2021-08-20T10:48:43+07:00 error: "500 - Cannot read property '0' of undefined - /api/product/ -POST - ::1"
+2021-08-20T10:48:43+07:00 info: '::1 - - [20/Aug/2021:03:48:43 +0000] "POST /api/product/ HTTP/1.1" 500 2 "http://localhost:5000/api/api-docs/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"\n'
+2021-08-20T10:49:16+07:00 error: '[productService][createProduct] errors:  err is not defined'
+2021-08-20T10:49:16+07:00 info: '::1 - - [20/Aug/2021:03:49:16 +0000] "POST /api/product/ HTTP/1.1" 500 14 "http://localhost:5000/api/api-docs/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"\n'
+2021-08-20T10:50:22+07:00 error: "[productService][createProduct] errors:  ER_BAD_FIELD_ERROR: Unknown column 'title' in 'field list'"
+2021-08-20T10:50:22+07:00 info: '::1 - - [20/Aug/2021:03:50:22 +0000] "POST /api/product/ HTTP/1.1" 500 329 "http://localhost:5000/api/api-docs/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"\n'
+2021-08-20T10:51:07+07:00 error: "[productService][createProduct] errors:  ER_NO_DEFAULT_FOR_FIELD: Field 'create_at' doesn't have a default value"
+2021-08-20T10:51:07+07:00 info: '::1 - - [20/Aug/2021:03:51:07 +0000] "POST /api/product/ HTTP/1.1" 500 341 "http://localhost:5000/api/api-docs/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"\n'
+2021-08-20T10:52:02+07:00 info: '::1 - - [20/Aug/2021:03:52:02 +0000] "POST /api/product/ HTTP/1.1" 200 56 "http://localhost:5000/api/api-docs/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"\n'
+2021-08-20T10:52:30+07:00 info: '::1 - - [20/Aug/2021:03:52:30 +0000] "POST /api/product/ HTTP/1.1" 200 56 "http://localhost:5000/api/api-docs/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"\n'
+2021-08-20T10:54:36+07:00 info: '::1 - - [20/Aug/2021:03:54:36 +0000] "GET /api/api-docs/ HTTP/1.1" 304 - "-" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"\n'
+2021-08-20T10:54:36+07:00 info: '::1 - - [20/Aug/2021:03:54:36 +0000] "GET /api/api-docs/swagger-ui.css HTTP/1.1" 304 - "http://localhost:5000/api/api-docs/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"\n'
+2021-08-20T10:54:36+07:00 info: '::1 - - [20/Aug/2021:03:54:36 +0000] "GET /api/api-docs/swagger-ui-init.js HTTP/1.1" 200 60751 "http://localhost:5000/api/api-docs/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"\n'
+2021-08-20T10:54:36+07:00 info: '::1 - - [20/Aug/2021:03:54:36 +0000] "GET /api/api-docs/swagger-ui-bundle.js HTTP/1.1" 304 - "http://localhost:5000/api/api-docs/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"\n'
+2021-08-20T10:54:36+07:00 info: '::1 - - [20/Aug/2021:03:54:36 +0000] "GET /api/api-docs/swagger-ui-standalone-preset.js HTTP/1.1" 304 - "http://localhost:5000/api/api-docs/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"\n'
+2021-08-20T10:54:37+07:00 info: '::1 - - [20/Aug/2021:03:54:37 +0000] "GET /api/api-docs/favicon-32x32.png HTTP/1.1" 304 - "http://localhost:5000/api/api-docs/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"\n'
+2021-08-20T10:55:32+07:00 info: '::1 - - [20/Aug/2021:03:55:32 +0000] "GET /api/product/ HTTP/1.1" 200 533 "http://localhost:5000/api/api-docs/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"\n'
+2021-08-20T10:59:57+07:00 info: '::1 - - [20/Aug/2021:03:59:57 +0000] "POST /api/user/login HTTP/1.1" 200 207 "http://localhost:5000/api/api-docs/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"\n'
+2021-08-20T11:00:38+07:00 info: '::1 - - [20/Aug/2021:04:00:38 +0000] "POST /api/product/ HTTP/1.1" 200 56 "http://localhost:5000/api/api-docs/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"\n'
+2021-08-20T11:00:46+07:00 info: '::1 - - [20/Aug/2021:04:00:46 +0000] "POST /api/product/ HTTP/1.1" 200 56 "http://localhost:5000/api/api-docs/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"\n'
+2021-08-20T11:02:59+07:00 error: '[productService][createProduct] errors:  ER_NO_REFERENCED_ROW_2: Cannot add or update a child row: a foreign key constraint fails (`cameradb`.`product`, CONSTRAINT `product_ibfk_1` FOREIGN KEY (`category_id`) REFERENCES `category` (`id`) ON DELETE CASCADE)'
+2021-08-20T11:02:59+07:00 info: '::1 - - [20/Aug/2021:04:02:59 +0000] "POST /api/product/ HTTP/1.1" 500 493 "http://localhost:5000/api/api-docs/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"\n'
+2021-08-20T11:03:07+07:00 info: '::1 - - [20/Aug/2021:04:03:07 +0000] "POST /api/product/ HTTP/1.1" 200 56 "http://localhost:5000/api/api-docs/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"\n'
+2021-08-20T11:03:23+07:00 info: '::1 - - [20/Aug/2021:04:03:23 +0000] "POST /api/product/ HTTP/1.1" 200 56 "http://localhost:5000/api/api-docs/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"\n'
+2021-08-20T11:03:29+07:00 info: '::1 - - [20/Aug/2021:04:03:29 +0000] "GET /api/product/ HTTP/1.1" 200 1051 "http://localhost:5000/api/api-docs/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"\n'
+2021-08-20T11:05:04+07:00 info: '::1 - - [20/Aug/2021:04:05:04 +0000] "GET /api/api-docs/ HTTP/1.1" 304 - "-" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"\n'
+2021-08-20T11:05:04+07:00 info: '::1 - - [20/Aug/2021:04:05:04 +0000] "GET /api/api-docs/swagger-ui.css HTTP/1.1" 304 - "http://localhost:5000/api/api-docs/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"\n'
+2021-08-20T11:05:04+07:00 info: '::1 - - [20/Aug/2021:04:05:04 +0000] "GET /api/api-docs/swagger-ui-bundle.js HTTP/1.1" 304 - "http://localhost:5000/api/api-docs/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"\n'
+2021-08-20T11:05:04+07:00 info: '::1 - - [20/Aug/2021:04:05:04 +0000] "GET /api/api-docs/swagger-ui-init.js HTTP/1.1" 200 60756 "http://localhost:5000/api/api-docs/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"\n'
+2021-08-20T11:05:04+07:00 info: '::1 - - [20/Aug/2021:04:05:04 +0000] "GET /api/api-docs/swagger-ui-standalone-preset.js HTTP/1.1" 304 - "http://localhost:5000/api/api-docs/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"\n'
+2021-08-20T11:05:04+07:00 info: '::1 - - [20/Aug/2021:04:05:04 +0000] "GET /api/api-docs/favicon-32x32.png HTTP/1.1" 304 - "http://localhost:5000/api/api-docs/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"\n'
+2021-08-20T11:05:17+07:00 info: '::1 - - [20/Aug/2021:04:05:17 +0000] "POST /api/user/login HTTP/1.1" 200 207 "http://localhost:5000/api/api-docs/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"\n'
+2021-08-20T11:05:57+07:00 error: '[productService][createProduct] errors:  material is not defined'
+2021-08-20T11:05:57+07:00 info: '::1 - - [20/Aug/2021:04:05:57 +0000] "PUT /api/product/2 HTTP/1.1" 500 14 "http://localhost:5000/api/api-docs/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"\n'
+2021-08-20T11:08:12+07:00 error: "[productService][updateProduct] errors:  ER_TRUNCATED_WRONG_VALUE: Truncated incorrect DOUBLE value: 'string'"
+2021-08-20T11:08:12+07:00 info: '::1 - - [20/Aug/2021:04:08:12 +0000] "PUT /api/product/2 HTTP/1.1" 500 483 "http://localhost:5000/api/api-docs/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"\n'
+2021-08-20T11:09:30+07:00 error: "[productService][updateProduct] errors:  ER_TRUNCATED_WRONG_VALUE: Truncated incorrect DOUBLE value: 'string'"
+2021-08-20T11:09:30+07:00 info: '::1 - - [20/Aug/2021:04:09:30 +0000] "PUT /api/product/2 HTTP/1.1" 500 483 "http://localhost:5000/api/api-docs/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"\n'
+2021-08-20T11:10:57+07:00 error: "[productService][updateProduct] errors:  ER_TRUNCATED_WRONG_VALUE: Truncated incorrect DOUBLE value: 'string'"
+2021-08-20T11:10:57+07:00 info: '::1 - - [20/Aug/2021:04:10:57 +0000] "PUT /api/product/2 HTTP/1.1" 500 483 "http://localhost:5000/api/api-docs/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"\n'
+2021-08-20T11:12:48+07:00 info: '::1 - - [20/Aug/2021:04:12:48 +0000] "PUT /api/product/2 HTTP/1.1" 200 54 "http://localhost:5000/api/api-docs/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"\n'
+2021-08-20T11:13:16+07:00 error: 'discount is not defined'
+2021-08-20T11:13:16+07:00 info: '::1 - - [20/Aug/2021:04:13:16 +0000] "GET /api/product/get-by-slug/stringxxxxx3456 HTTP/1.1" 500 82 "http://localhost:5000/api/api-docs/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"\n'
+2021-08-20T11:19:37+07:00 error: 'listProduct is not defined'
+2021-08-20T11:19:37+07:00 info: '::1 - - [20/Aug/2021:04:19:37 +0000] "GET /api/product/get-by-slug/stringxxxxx3456 HTTP/1.1" 500 82 "http://localhost:5000/api/api-docs/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"\n'
+2021-08-20T11:19:47+07:00 error: 'listProduct.map is not a function'
+2021-08-20T11:19:47+07:00 info: '::1 - - [20/Aug/2021:04:19:47 +0000] "GET /api/product/get-by-slug/stringxxxxx3456 HTTP/1.1" 500 82 "http://localhost:5000/api/api-docs/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"\n'
+2021-08-20T11:20:07+07:00 error: 'listProduct.map is not a function'
+2021-08-20T11:20:07+07:00 info: '::1 - - [20/Aug/2021:04:20:07 +0000] "GET /api/product/get-by-slug/stringxxxxx3456 HTTP/1.1" 500 82 "http://localhost:5000/api/api-docs/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"\n'
+2021-08-20T11:20:45+07:00 error: 'listProduct.map is not a function'
+2021-08-20T11:20:45+07:00 info: '::1 - - [20/Aug/2021:04:20:45 +0000] "GET /api/product/get-by-slug/stringxxxxx3456 HTTP/1.1" 500 82 "http://localhost:5000/api/api-docs/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"\n'
+2021-08-20T11:22:15+07:00 error: "uncaughtException: Unexpected token ']'\n" +
+  '/home/dalang/CamWebsite/services/productService/productService.js:223\n' +
+  '                console.log(productResult[]);\n' +
+  '                                          ^\n' +
+  '\n' +
+  "SyntaxError: Unexpected token ']'\n" +
+  '    at wrapSafe (internal/modules/cjs/loader.js:979:16)\n' +
+  '    at Module._compile (internal/modules/cjs/loader.js:1027:27)\n' +
+  '    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)\n' +
+  '    at Module.load (internal/modules/cjs/loader.js:928:32)\n' +
+  '    at Function.Module._load (internal/modules/cjs/loader.js:769:14)\n' +
+  '    at Module.require (internal/modules/cjs/loader.js:952:19)\n' +
+  '    at require (internal/modules/cjs/helpers.js:88:18)\n' +
+  '    at Object.<anonymous> (/home/dalang/CamWebsite/apis/product/productApi.js:4:24)\n' +
+  '    at Module._compile (internal/modules/cjs/loader.js:1063:30)\n' +
+  '    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)'
+2021-08-20T11:22:18+07:00 error: 'e is not defined'
+2021-08-20T11:22:18+07:00 info: '::1 - - [20/Aug/2021:04:22:18 +0000] "GET /api/product/get-by-slug/stringxxxxx3456 HTTP/1.1" 500 82 "http://localhost:5000/api/api-docs/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"\n'
+2021-08-20T11:26:25+07:00 info: '::1 - - [20/Aug/2021:04:26:25 +0000] "GET /api/product/get-by-slug/stringxxxxx3456 HTTP/1.1" 200 286 "http://localhost:5000/api/api-docs/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"\n'
+2021-08-20T11:26:45+07:00 error: "uncaughtException: Unexpected token 'return'\n" +
+  '/home/dalang/CamWebsite/services/productService/productService.js:226\n' +
+  '                return resolve(this.returnProduct(productResult[0]));\n' +
+  '                ^^^^^^\n' +
+  '\n' +
+  "SyntaxError: Unexpected token 'return'\n" +
+  '    at wrapSafe (internal/modules/cjs/loader.js:979:16)\n' +
+  '    at Module._compile (internal/modules/cjs/loader.js:1027:27)\n' +
+  '    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)\n' +
+  '    at Module.load (internal/modules/cjs/loader.js:928:32)\n' +
+  '    at Function.Module._load (internal/modules/cjs/loader.js:769:14)\n' +
+  '    at Module.require (internal/modules/cjs/loader.js:952:19)\n' +
+  '    at require (internal/modules/cjs/helpers.js:88:18)\n' +
+  '    at Object.<anonymous> (/home/dalang/CamWebsite/apis/product/productApi.js:4:24)\n' +
+  '    at Module._compile (internal/modules/cjs/loader.js:1063:30)\n' +
+  '    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)'
+2021-08-20T11:26:54+07:00 info: '::1 - - [20/Aug/2021:04:26:54 +0000] "GET /api/product/get-by-slug/stringxxxxx3456 HTTP/1.1" 304 - "http://localhost:5000/api/api-docs/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"\n'
+2021-08-20T11:28:14+07:00 info: '::1 - - [20/Aug/2021:04:28:14 +0000] "GET /api/api-docs/ HTTP/1.1" 304 - "-" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"\n'
+2021-08-20T11:28:14+07:00 info: '::1 - - [20/Aug/2021:04:28:14 +0000] "GET /api/api-docs/swagger-ui.css HTTP/1.1" 304 - "http://localhost:5000/api/api-docs/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"\n'
+2021-08-20T11:28:14+07:00 info: '::1 - - [20/Aug/2021:04:28:14 +0000] "GET /api/api-docs/swagger-ui-init.js HTTP/1.1" 304 - "http://localhost:5000/api/api-docs/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"\n'
+2021-08-20T11:28:14+07:00 info: '::1 - - [20/Aug/2021:04:28:14 +0000] "GET /api/api-docs/swagger-ui-bundle.js HTTP/1.1" 304 - "http://localhost:5000/api/api-docs/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"\n'
+2021-08-20T11:28:14+07:00 info: '::1 - - [20/Aug/2021:04:28:14 +0000] "GET /api/api-docs/swagger-ui-standalone-preset.js HTTP/1.1" 304 - "http://localhost:5000/api/api-docs/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"\n'
+2021-08-20T11:28:14+07:00 info: '::1 - - [20/Aug/2021:04:28:14 +0000] "GET /api/api-docs/favicon-32x32.png HTTP/1.1" 200 628 "http://localhost:5000/api/api-docs/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"\n'
+2021-08-20T11:30:46+07:00 info: '::1 - - [20/Aug/2021:04:30:46 +0000] "GET /api/api-docs/ HTTP/1.1" 304 - "-" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"\n'
+2021-08-20T11:30:46+07:00 info: '::1 - - [20/Aug/2021:04:30:46 +0000] "GET /api/api-docs/swagger-ui.css HTTP/1.1" 304 - "http://localhost:5000/api/api-docs/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"\n'
+2021-08-20T11:30:46+07:00 info: '::1 - - [20/Aug/2021:04:30:46 +0000] "GET /api/api-docs/swagger-ui-init.js HTTP/1.1" 200 60569 "http://localhost:5000/api/api-docs/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"\n'
+2021-08-20T11:30:46+07:00 info: '::1 - - [20/Aug/2021:04:30:46 +0000] "GET /api/api-docs/swagger-ui-bundle.js HTTP/1.1" 304 - "http://localhost:5000/api/api-docs/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"\n'
+2021-08-20T11:30:46+07:00 info: '::1 - - [20/Aug/2021:04:30:46 +0000] "GET /api/api-docs/swagger-ui-standalone-preset.js HTTP/1.1" 304 - "http://localhost:5000/api/api-docs/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"\n'
+2021-08-20T11:30:46+07:00 info: '::1 - - [20/Aug/2021:04:30:46 +0000] "GET /api/api-docs/favicon-32x32.png HTTP/1.1" 200 628 "http://localhost:5000/api/api-docs/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"\n'
+2021-08-20T11:31:53+07:00 info: '::1 - - [20/Aug/2021:04:31:53 +0000] "GET /api/category/ HTTP/1.1" 200 340 "http://localhost:5000/api/api-docs/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"\n'
+2021-08-20T11:32:16+07:00 error: '500 - category_id is not defined - /api/product/get-by-category-slug/hoavanhoavanaloalo -GET - ::1'
+2021-08-20T11:32:16+07:00 info: '::1 - - [20/Aug/2021:04:32:16 +0000] "GET /api/product/get-by-category-slug/hoavanhoavanaloalo HTTP/1.1" 500 2 "http://localhost:5000/api/api-docs/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"\n'
+2021-08-20T11:32:46+07:00 info: '::1 - - [20/Aug/2021:04:32:46 +0000] "GET /api/product/get-by-category-slug/hoavanhoavanaloalo HTTP/1.1" 200 44 "http://localhost:5000/api/api-docs/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"\n'
+2021-08-20T11:33:34+07:00 info: '::1 - - [20/Aug/2021:04:33:34 +0000] "GET /api/product/get-by-category-slug/hoavanhoavanaloalo HTTP/1.1" 304 - "http://localhost:5000/api/api-docs/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"\n'
+2021-08-20T11:33:38+07:00 info: '::1 - - [20/Aug/2021:04:33:38 +0000] "GET /api/product/get-by-category-slug/hoavanhoavanaloalo HTTP/1.1" 304 - "http://localhost:5000/api/api-docs/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"\n'
+2021-08-20T11:35:23+07:00 info: '::1 - - [20/Aug/2021:04:35:23 +0000] "GET /api/product/get-by-category-slug/hoavanhoavan HTTP/1.1" 200 1015 "http://localhost:5000/api/api-docs/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"\n'
+2021-08-20T11:35:35+07:00 error: '500 - productService.getProductsByCategoryId is not a function - /api/product/get-by-category-id/1 -GET - ::1'
+2021-08-20T11:35:35+07:00 info: '::1 - - [20/Aug/2021:04:35:35 +0000] "GET /api/product/get-by-category-id/1 HTTP/1.1" 500 2 "http://localhost:5000/api/api-docs/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"\n'
+2021-08-20T11:36:17+07:00 error: "uncaughtException: Unexpected token '{'\n" +
+  '/home/dalang/CamWebsite/services/productService/productService.js:165\n' +
+  '    getProductsByCategorySlug(category_slug, productsPerPage, pageNumber, orderType, search) {\n' +
+  '                                                                                             ^\n' +
+  '\n' +
+  "SyntaxError: Unexpected token '{'\n" +
+  '    at wrapSafe (internal/modules/cjs/loader.js:979:16)\n' +
+  '    at Module._compile (internal/modules/cjs/loader.js:1027:27)\n' +
+  '    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)\n' +
+  '    at Module.load (internal/modules/cjs/loader.js:928:32)\n' +
+  '    at Function.Module._load (internal/modules/cjs/loader.js:769:14)\n' +
+  '    at Module.require (internal/modules/cjs/loader.js:952:19)\n' +
+  '    at require (internal/modules/cjs/helpers.js:88:18)\n' +
+  '    at Object.<anonymous> (/home/dalang/CamWebsite/apis/product/productApi.js:4:24)\n' +
+  '    at Module._compile (internal/modules/cjs/loader.js:1063:30)\n' +
+  '    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)'
+2021-08-20T11:36:35+07:00 info: '::1 - - [20/Aug/2021:04:36:35 +0000] "GET /api/product/get-by-category-id/1 HTTP/1.1" 200 916 "http://localhost:5000/api/api-docs/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"\n'
+2021-08-20T11:36:49+07:00 info: '::1 - - [20/Aug/2021:04:36:49 +0000] "GET /api/product/get-by-category-id/1 HTTP/1.1" 304 - "http://localhost:5000/api/api-docs/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"\n'
+2021-08-20T11:37:10+07:00 info: '::1 - - [20/Aug/2021:04:37:10 +0000] "GET /api/product/ HTTP/1.1" 200 1047 "http://localhost:5000/api/api-docs/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"\n'
+2021-08-20T11:39:34+07:00 info: '::1 - - [20/Aug/2021:04:39:34 +0000] "GET /api/product/get-by-category-slug/hoavanhoava HTTP/1.1" 200 44 "http://localhost:5000/api/api-docs/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"\n'
+2021-08-20T11:39:41+07:00 info: '::1 - - [20/Aug/2021:04:39:41 +0000] "GET /api/product/get-by-category-slug/hoavanhoavan HTTP/1.1" 200 1047 "http://localhost:5000/api/api-docs/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"\n'
+2021-08-20T11:40:18+07:00 info: '::1 - - [20/Aug/2021:04:40:18 +0000] "GET /api/product/get-by-category-id/1 HTTP/1.1" 304 - "http://localhost:5000/api/api-docs/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"\n'
+2021-08-20T11:41:23+07:00 info: '::1 - - [20/Aug/2021:04:41:23 +0000] "GET /api/product/get-by-category-id/1 HTTP/1.1" 200 1220 "http://localhost:5000/api/api-docs/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"\n'
+2021-08-20T11:41:53+07:00 info: '::1 - - [20/Aug/2021:04:41:53 +0000] "GET /api/product/get-by-category-id/1 HTTP/1.1" 200 1047 "http://localhost:5000/api/api-docs/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"\n'
+2021-08-20T11:42:52+07:00 info: '::1 - - [20/Aug/2021:04:42:52 +0000] "GET /api/api-docs/ HTTP/1.1" 304 - "-" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"\n'
+2021-08-20T11:42:52+07:00 info: '::1 - - [20/Aug/2021:04:42:52 +0000] "GET /api/api-docs/swagger-ui.css HTTP/1.1" 304 - "http://localhost:5000/api/api-docs/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"\n'
+2021-08-20T11:42:52+07:00 info: '::1 - - [20/Aug/2021:04:42:52 +0000] "GET /api/api-docs/swagger-ui-init.js HTTP/1.1" 200 59100 "http://localhost:5000/api/api-docs/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"\n'
+2021-08-20T11:42:52+07:00 info: '::1 - - [20/Aug/2021:04:42:52 +0000] "GET /api/api-docs/swagger-ui-bundle.js HTTP/1.1" 304 - "http://localhost:5000/api/api-docs/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"\n'
+2021-08-20T11:42:52+07:00 info: '::1 - - [20/Aug/2021:04:42:52 +0000] "GET /api/api-docs/swagger-ui-standalone-preset.js HTTP/1.1" 304 - "http://localhost:5000/api/api-docs/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"\n'
+2021-08-20T11:42:53+07:00 info: '::1 - - [20/Aug/2021:04:42:53 +0000] "GET /api/api-docs/favicon-32x32.png HTTP/1.1" 200 628 "http://localhost:5000/api/api-docs/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"\n'
+2021-08-20T11:44:06+07:00 error: 'uncaughtException: /home/dalang/CamWebsite/swagger.json: Unexpected token } in JSON at position 51935\n' +
+  'SyntaxError: /home/dalang/CamWebsite/swagger.json: Unexpected token } in JSON at position 51935\n' +
+  '    at parse (<anonymous>)\n' +
+  '    at Object.Module._extensions..json (internal/modules/cjs/loader.js:1106:22)\n' +
+  '    at Module.load (internal/modules/cjs/loader.js:928:32)\n' +
+  '    at Function.Module._load (internal/modules/cjs/loader.js:769:14)\n' +
+  '    at Module.require (internal/modules/cjs/loader.js:952:19)\n' +
+  '    at require (internal/modules/cjs/helpers.js:88:18)\n' +
+  '    at Object.<anonymous> (/home/dalang/CamWebsite/server.js:43:25)\n' +
+  '    at Module._compile (internal/modules/cjs/loader.js:1063:30)\n' +
+  '    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)\n' +
+  '    at Module.load (internal/modules/cjs/loader.js:928:32)'
+2021-08-20T11:45:32+07:00 info: '::1 - - [20/Aug/2021:04:45:32 +0000] "GET /api/api-docs/ HTTP/1.1" 304 - "-" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"\n'
+2021-08-20T11:45:32+07:00 info: '::1 - - [20/Aug/2021:04:45:32 +0000] "GET /api/api-docs/swagger-ui.css HTTP/1.1" 304 - "http://localhost:5000/api/api-docs/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"\n'
+2021-08-20T11:45:32+07:00 info: '::1 - - [20/Aug/2021:04:45:32 +0000] "GET /api/api-docs/swagger-ui-bundle.js HTTP/1.1" 304 - "http://localhost:5000/api/api-docs/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"\n'
+2021-08-20T11:45:32+07:00 info: '::1 - - [20/Aug/2021:04:45:32 +0000] "GET /api/api-docs/swagger-ui-standalone-preset.js HTTP/1.1" 304 - "http://localhost:5000/api/api-docs/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"\n'
+2021-08-20T11:45:32+07:00 info: '::1 - - [20/Aug/2021:04:45:32 +0000] "GET /api/api-docs/swagger-ui-init.js HTTP/1.1" 200 59335 "http://localhost:5000/api/api-docs/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"\n'
+2021-08-20T11:45:33+07:00 info: '::1 - - [20/Aug/2021:04:45:33 +0000] "GET /api/api-docs/favicon-32x32.png HTTP/1.1" 200 628 "http://localhost:5000/api/api-docs/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"\n'

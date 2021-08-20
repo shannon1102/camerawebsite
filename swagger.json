@@ -1,9 +1,9 @@
 {
   "swagger": "2.0",
   "info": {
-    "description": "Giang Minh Viet Apis",
+    "description": "Camera Apis",
     "version": "1.0.0",
-    "title": "Giang Minh Viet Apis",
+    "title": "Camera Apis",
     "termsOfService": "http://swagger.io/terms/",
     "contact": {
       "email": "apiteam@swagger.io"
@@ -444,12 +444,16 @@
                   "type": "integer"
                 },
                 "discount": {
-                  "type": "string"
+                  "type": "integer"
                 },
-                "list_image": {
-                  "type":"array"
+                "list_product_images": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "minItems": 0
+                  }
                 },
-                "tag_id": {
+                "category_id": {
                   "type": "integer"
                 }
               }
@@ -549,7 +553,7 @@
         }
       }
     },
-    "/product/get-by-category-name/": {
+    "/product/get-by-category-slug/{category_slug}": {
       "get": {
         "consumes": [
           "application/json"
@@ -559,17 +563,10 @@
         ],
         "parameters": [
           {
-            "name": "main_category",
+            "name": "category_slug",
             "type": "string",
-            "in": "query",
-            "description": "main category name",
-            "required": true
-          },
-          {
-            "name": "category",
-            "type": "string",
-            "in": "query",
-            "description": "category name",
+            "in": "path",
+            "description": "category slug",
             "required": true
           },
           {
@@ -600,7 +597,7 @@
         "tags": [
           "Product Api"
         ],
-        "summary": "Get Products By Category",
+        "summary": "Get Products By Category Slug",
         "description": "",
         "responses": {
           "200": {
@@ -741,11 +738,15 @@
                 "discount": {
                   "type": "integer"
                 },
-                "tag_id": {
+                "category_id": {
                   "type": "integer"
                 },
-                "list_image":{
-                  "type": "array"
+                "list_product_images":{
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "minItems": 0
+                  }
                 },
                 "slug": {
                   "type": "string"
@@ -805,60 +806,6 @@
             "description": "success",
             "schema": {
               "$ref": "#/definitions/success"
-            }
-          },
-          "500": {
-            "description": "error",
-            "schema": {
-              "$ref": "#/definitions/error"
-            }
-          }
-        }
-      }
-    },
-    "/product/get-by-name/{name}": {
-      "get": {
-        "consumes": [
-          "application/json"
-        ],
-        "produces": [
-          "application/json"
-        ],
-        "parameters": [
-          {
-            "name": "name",
-            "type": "string",
-            "in": "path",
-            "required": true
-          },{
-            "name": "productsPerPage",
-            "in": "query",
-            "description": "Max products can be display in one page",
-            "required": false
-          },
-          {
-            "name": "pageNumber",
-            "in": "query",
-            "description": "Page number",
-            "required": false
-          },
-          {
-            "name": "orderType",
-            "in": "query",
-            "description": "Order type to display: 1-oldest 2-newest ",
-            "required": false
-          }
-        ],
-        "tags": [
-          "Product Api"
-        ],
-        "summary": "Get Product By title ",
-        "description": "",
-        "responses": {
-          "200": {
-            "description": "success",
-            "schema": {
-              "$ref": "#/definitions/product"
             }
           },
           "500": {
@@ -2201,6 +2148,9 @@
         "tag_id": {
           "$ref": "#/definitions/tag"
         },
+        "slug": {
+          "type": "string"
+        },
         "created_at": {
           "type": "string",
           "example": "2020-01-08T13:25:50"
@@ -2226,8 +2176,12 @@
         "detail":{
           "type": "string"
         },
-        "list_image": {
-          "type": "array"
+        "list_product_images": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minItems": 0
+          }
         },
         "price": {
           "type": "integer"
@@ -2235,8 +2189,11 @@
         "discount": {
           "type": "integer"
         },
-        "tag_id": {
-          "$ref": "#/definitions/tag"
+        "category_id": {
+          "$ref": "#/definitions/category"
+        },
+        "slug": {
+          "type": "string"
         },
         "created_at": {
           "type": "string",
@@ -2267,6 +2224,9 @@
         },
         "name": {
           "type": "string"
+        },
+        "slug": {
+          "type": "string"
         }
       }
     },
@@ -2279,8 +2239,11 @@
         "name": {
           "type": "string"
         },
-        "main_category": {
-          "$ref": "#/definitions/tag"
+        "description": {
+          "type": "string"
+        },
+        "slug": {
+          "type": "string"
         }
       }
     },
