@@ -264,10 +264,11 @@ class ProductService {
 
         })
     }
-    updateProduct(id, name, description, detail, list_product_images, price, discount, category_id, slug) {
+    updateProduct(id, name, description, detail, list_product_images, price, discount, category_id) {
 
         return new Promise(async (resolve, reject) => {
             try {
+                const newSlug = createSlug(name);
                 const url_image1 = list_product_images[0] ? list_product_images[0] : null;
                 const url_image2 = list_product_images[1] ? list_product_images[1] : null;
                 const url_image3 = list_product_images[2] ? list_product_images[2] : null;
@@ -281,7 +282,7 @@ class ProductService {
                price = ${mysql.escape(price)},
                discount = ${mysql.escape(discount)},
                category_id = ${mysql.escape(category_id)},
-               slug = ${mysql.escape(slug)}
+               slug = ${mysql.escape(newSlug)}
                WHERE id = ${mysql.escape(id)}
                `
                 const [err, result] = await to(this.mysqlDb.poolQuery(query))

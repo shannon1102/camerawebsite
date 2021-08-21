@@ -106,7 +106,7 @@ class TagService {
             return resolve(result?.insertId)
         })
     }
-    updateTag(id, name, description) {
+    updateTag(id, name) {
         return new Promise(async (resolve, reject) => {
             const newSlug = createSlug(name);
             const query = `

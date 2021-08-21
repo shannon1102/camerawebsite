@@ -124,10 +124,10 @@ productApi.post('/',verifyToken,adminRole,checkRequiredFieldInBody(['name','desc
 })
 productApi.put('/:id',verifyToken,adminRole, (req,res,next)=>{
     let {id} = req.params
-    let {name,description,detail,list_product_images,price,discount,category_id,slug} = req.body
+    let {name,description,detail,list_product_images,price,discount,category_id} = req.body
     console.log(req.body)
     productService
-    .updateProduct(id,name,description,detail,list_product_images,price,discount,category_id,slug)
+    .updateProduct(id,name,description,detail,list_product_images,price,discount,category_id)
     .then(result=>{
         return res.status(200).json({  
             status:200,

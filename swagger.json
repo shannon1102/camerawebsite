@@ -784,9 +784,6 @@
                     "type": "string",
                     "minItems": 0
                   }
-                },
-                "slug": {
-                  "type": "string"
                 }
               }
             }
