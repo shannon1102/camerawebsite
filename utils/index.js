@@ -1,4 +1,5 @@
 const slugify = require('slugify')
+const multer =  require('multer')
 
 const removeAccent = (str) => {
     str = str.replace(/à|á|ạ|ả|ã|â|ầ|ấ|ậ|ẩ|ẫ|ă|ằ|ắ|ặ|ẳ|ẵ/g, "a");
@@ -38,4 +39,15 @@ const createSlug = (str) => {
     return newStr + '-' + Date.now()
 
 }
+
+multer({
+    storage: multer.diskStorage({}),
+    fieldFilter: (req, file , callback ) => {
+        if(!file.mimetpye.match(/jpe|jpeg|png|gif$i/)){
+            callback(new Error('File is not supported'), false)
+            return
+        }
+        callback(null,true)
+    } 
+})
 module.exports = Object.assign({}, {createSlug})

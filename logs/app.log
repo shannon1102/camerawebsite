@@ -4712,3 +4712,272 @@
 2021-08-20T22:33:43+07:00 info: '::1 - - [20/Aug/2021:15:33:43 +0000] "GET /api/inquiry/2 HTTP/1.1" 500 54 "http://localhost:5000/api/api-docs/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"\n'
 2021-08-20T22:33:48+07:00 info: '::1 - - [20/Aug/2021:15:33:48 +0000] "GET /api/inquiry/4 HTTP/1.1" 200 269 "http://localhost:5000/api/api-docs/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"\n'
 2021-08-20T22:34:00+07:00 info: '::1 - - [20/Aug/2021:15:34:00 +0000] "GET /api/inquiry/get-by-customer-name/string HTTP/1.1" 200 727 "http://localhost:5000/api/api-docs/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"\n'
+2021-08-21T02:32:16+07:00 error: 'uncaughtException: cloudinary is not defined\n' +
+  'ReferenceError: cloudinary is not defined\n' +
+  '    at Object.<anonymous> (/home/dalang/CamWebsite/config/config.js:54:1)\n' +
+  '    at Module._compile (internal/modules/cjs/loader.js:1063:30)\n' +
+  '    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)\n' +
+  '    at Module.load (internal/modules/cjs/loader.js:928:32)\n' +
+  '    at Function.Module._load (internal/modules/cjs/loader.js:769:14)\n' +
+  '    at Module.require (internal/modules/cjs/loader.js:952:19)\n' +
+  '    at require (internal/modules/cjs/helpers.js:88:18)\n' +
+  '    at Object.<anonymous> (/home/dalang/CamWebsite/config/index.js:3:55)\n' +
+  '    at Module._compile (internal/modules/cjs/loader.js:1063:30)\n' +
+  '    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)'
+2021-08-21T02:32:47+07:00 error: 'uncaughtException: url_image_up is not defined\n' +
+  'ReferenceError: url_image_up is not defined\n' +
+  '    at Object.<anonymous> (/home/dalang/CamWebsite/apis/post/postApi.js:81:54)\n' +
+  '    at Module._compile (internal/modules/cjs/loader.js:1063:30)\n' +
+  '    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)\n' +
+  '    at Module.load (internal/modules/cjs/loader.js:928:32)\n' +
+  '    at Function.Module._load (internal/modules/cjs/loader.js:769:14)\n' +
+  '    at Module.require (internal/modules/cjs/loader.js:952:19)\n' +
+  '    at require (internal/modules/cjs/helpers.js:88:18)\n' +
+  '    at Object.<anonymous> (/home/dalang/CamWebsite/server.js:23:17)\n' +
+  '    at Module._compile (internal/modules/cjs/loader.js:1063:30)\n' +
+  '    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)'
+2021-08-21T02:32:49+07:00 error: 'uncaughtException: url_image_up is not defined\n' +
+  'ReferenceError: url_image_up is not defined\n' +
+  '    at Object.<anonymous> (/home/dalang/CamWebsite/apis/post/postApi.js:81:54)\n' +
+  '    at Module._compile (internal/modules/cjs/loader.js:1063:30)\n' +
+  '    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)\n' +
+  '    at Module.load (internal/modules/cjs/loader.js:928:32)\n' +
+  '    at Function.Module._load (internal/modules/cjs/loader.js:769:14)\n' +
+  '    at Module.require (internal/modules/cjs/loader.js:952:19)\n' +
+  '    at require (internal/modules/cjs/helpers.js:88:18)\n' +
+  '    at Object.<anonymous> (/home/dalang/CamWebsite/server.js:23:17)\n' +
+  '    at Module._compile (internal/modules/cjs/loader.js:1063:30)\n' +
+  '    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)'
+2021-08-21T02:34:43+07:00 info: '::1 - - [20/Aug/2021:19:34:43 +0000] "GET /api/api-docs/ HTTP/1.1" 304 - "-" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"\n'
+2021-08-21T02:34:43+07:00 info: '::1 - - [20/Aug/2021:19:34:43 +0000] "GET /api/api-docs/swagger-ui.css HTTP/1.1" 200 143669 "http://localhost:5000/api/api-docs/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"\n'
+2021-08-21T02:34:43+07:00 info: '::1 - - [20/Aug/2021:19:34:43 +0000] "GET /api/api-docs/swagger-ui-init.js HTTP/1.1" 304 - "http://localhost:5000/api/api-docs/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"\n'
+2021-08-21T02:34:43+07:00 info: '::1 - - [20/Aug/2021:19:34:43 +0000] "GET /api/api-docs/swagger-ui-standalone-preset.js HTTP/1.1" 200 338084 "http://localhost:5000/api/api-docs/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"\n'
+2021-08-21T02:34:43+07:00 info: '::1 - - [20/Aug/2021:19:34:43 +0000] "GET /api/api-docs/swagger-ui-bundle.js HTTP/1.1" 200 1100495 "http://localhost:5000/api/api-docs/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"\n'
+2021-08-21T02:36:38+07:00 info: '::1 - - [20/Aug/2021:19:36:38 +0000] "GET /api/post/ HTTP/1.1" 304 - "http://localhost:5000/api/api-docs/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"\n'
+2021-08-21T02:37:08+07:00 info: '::1 - - [20/Aug/2021:19:37:08 +0000] "POST /api/user/login HTTP/1.1" 200 207 "http://localhost:5000/api/api-docs/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"\n'
+2021-08-21T02:38:08+07:00 error: '500 - Unexpected field - /api/post -POST - ::1'
+2021-08-21T02:38:08+07:00 info: '::1 - - [20/Aug/2021:19:38:08 +0000] "POST /api/post HTTP/1.1" 500 101 "-" "PostmanRuntime/7.26.8"\n'
+2021-08-21T02:38:40+07:00 error: '500 - Unexpected field - /api/post -POST - ::1'
+2021-08-21T02:38:40+07:00 info: '::1 - - [20/Aug/2021:19:38:40 +0000] "POST /api/post HTTP/1.1" 500 101 "-" "PostmanRuntime/7.26.8"\n'
+2021-08-21T02:42:46+07:00 error: '500 - req.body.hasOwnProperty is not a function - /api/post -POST - ::1'
+2021-08-21T02:42:46+07:00 info: '::1 - - [20/Aug/2021:19:42:46 +0000] "POST /api/post HTTP/1.1" 500 2 "-" "PostmanRuntime/7.26.8"\n'
+2021-08-21T02:43:47+07:00 info: '::1 - - [20/Aug/2021:19:43:47 +0000] "GET /api/post HTTP/1.1" 200 433 "-" "PostmanRuntime/7.26.8"\n'
+2021-08-21T02:45:12+07:00 info: '::1 - - [20/Aug/2021:19:45:12 +0000] "POST /api/post HTTP/1.1" 500 27 "-" "PostmanRuntime/7.26.8"\n'
+2021-08-21T02:57:13+07:00 error: 'uncaughtException: multer is not defined\n' +
+  'ReferenceError: multer is not defined\n' +
+  '    at Object.<anonymous> (/home/dalang/CamWebsite/apis/post/postApi.js:20:17)\n' +
+  '    at Module._compile (internal/modules/cjs/loader.js:1063:30)\n' +
+  '    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)\n' +
+  '    at Module.load (internal/modules/cjs/loader.js:928:32)\n' +
+  '    at Function.Module._load (internal/modules/cjs/loader.js:769:14)\n' +
+  '    at Module.require (internal/modules/cjs/loader.js:952:19)\n' +
+  '    at require (internal/modules/cjs/helpers.js:88:18)\n' +
+  '    at Object.<anonymous> (/home/dalang/CamWebsite/server.js:23:17)\n' +
+  '    at Module._compile (internal/modules/cjs/loader.js:1063:30)\n' +
+  '    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)'
+2021-08-21T02:59:17+07:00 error: 'uncaughtException: uploader is not defined\n' +
+  'ReferenceError: uploader is not defined\n' +
+  '    at Object.<anonymous> (/home/dalang/CamWebsite/apis/post/postApi.js:86:16)\n' +
+  '    at Module._compile (internal/modules/cjs/loader.js:1063:30)\n' +
+  '    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)\n' +
+  '    at Module.load (internal/modules/cjs/loader.js:928:32)\n' +
+  '    at Function.Module._load (internal/modules/cjs/loader.js:769:14)\n' +
+  '    at Module.require (internal/modules/cjs/loader.js:952:19)\n' +
+  '    at require (internal/modules/cjs/helpers.js:88:18)\n' +
+  '    at Object.<anonymous> (/home/dalang/CamWebsite/server.js:23:17)\n' +
+  '    at Module._compile (internal/modules/cjs/loader.js:1063:30)\n' +
+  '    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)'
+2021-08-21T03:01:58+07:00 error: '500 - req.body.hasOwnProperty is not a function - /api/post -POST - ::1'
+2021-08-21T03:01:58+07:00 info: '::1 - - [20/Aug/2021:20:01:58 +0000] "POST /api/post HTTP/1.1" 500 2 "-" "PostmanRuntime/7.26.8"\n'
+2021-08-21T03:02:38+07:00 error: '500 - req.body.hasOwnProperty is not a function - /api/post -POST - ::1'
+2021-08-21T03:02:38+07:00 info: '::1 - - [20/Aug/2021:20:02:38 +0000] "POST /api/post HTTP/1.1" 500 2 "-" "PostmanRuntime/7.26.8"\n'
+2021-08-21T10:54:38+07:00 error: '500 - req.body.hasOwnProperty is not a function - /api/post -POST - ::1'
+2021-08-21T10:54:38+07:00 info: '::1 - - [21/Aug/2021:03:54:38 +0000] "POST /api/post HTTP/1.1" 500 2 "-" "PostmanRuntime/7.26.8"\n'
+2021-08-21T10:55:20+07:00 error: '500 - req.body.hasOwnProperty is not a function - /api/post -POST - ::1'
+2021-08-21T10:55:20+07:00 info: '::1 - - [21/Aug/2021:03:55:20 +0000] "POST /api/post HTTP/1.1" 500 2 "-" "PostmanRuntime/7.26.8"\n'
+2021-08-21T10:57:37+07:00 info: '::1 - - [21/Aug/2021:03:57:37 +0000] "POST /api/post HTTP/1.1" 200 55 "-" "PostmanRuntime/7.26.8"\n'
+2021-08-21T10:58:14+07:00 info: '::1 - - [21/Aug/2021:03:58:14 +0000] "POST /api/post HTTP/1.1" 200 55 "-" "PostmanRuntime/7.26.8"\n'
+2021-08-21T11:00:13+07:00 info: '::1 - - [21/Aug/2021:04:00:13 +0000] "POST /api/post HTTP/1.1" 200 55 "-" "PostmanRuntime/7.26.8"\n'
+2021-08-21T11:01:17+07:00 info: '::1 - - [21/Aug/2021:04:01:17 +0000] "POST /api/post HTTP/1.1" 200 55 "-" "PostmanRuntime/7.26.8"\n'
+2021-08-21T11:03:16+07:00 info: '::1 - - [21/Aug/2021:04:03:16 +0000] "POST /api/post HTTP/1.1" 200 55 "-" "PostmanRuntime/7.26.8"\n'
+2021-08-21T11:31:57+07:00 error: 'uncaughtException: Cannot use import statement outside a module\n' +
+  '/home/dalang/CamWebsite/apis/post/postApi.js:12\n' +
+  "import Datauri from 'datauri';\n" +
+  '^^^^^^\n' +
+  '\n' +
+  'SyntaxError: Cannot use import statement outside a module\n' +
+  '    at wrapSafe (internal/modules/cjs/loader.js:979:16)\n' +
+  '    at Module._compile (internal/modules/cjs/loader.js:1027:27)\n' +
+  '    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)\n' +
+  '    at Module.load (internal/modules/cjs/loader.js:928:32)\n' +
+  '    at Function.Module._load (internal/modules/cjs/loader.js:769:14)\n' +
+  '    at Module.require (internal/modules/cjs/loader.js:952:19)\n' +
+  '    at require (internal/modules/cjs/helpers.js:88:18)\n' +
+  '    at Object.<anonymous> (/home/dalang/CamWebsite/server.js:23:17)\n' +
+  '    at Module._compile (internal/modules/cjs/loader.js:1063:30)\n' +
+  '    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)'
+2021-08-21T17:15:34+07:00 error: 'uncaughtException: Cannot use import statement outside a module\n' +
+  '/home/dalang/CamWebsite/apis/post/postApi.js:12\n' +
+  "import Datauri from 'datauri';\n" +
+  '^^^^^^\n' +
+  '\n' +
+  'SyntaxError: Cannot use import statement outside a module\n' +
+  '    at wrapSafe (internal/modules/cjs/loader.js:979:16)\n' +
+  '    at Module._compile (internal/modules/cjs/loader.js:1027:27)\n' +
+  '    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)\n' +
+  '    at Module.load (internal/modules/cjs/loader.js:928:32)\n' +
+  '    at Function.Module._load (internal/modules/cjs/loader.js:769:14)\n' +
+  '    at Module.require (internal/modules/cjs/loader.js:952:19)\n' +
+  '    at require (internal/modules/cjs/helpers.js:88:18)\n' +
+  '    at Object.<anonymous> (/home/dalang/CamWebsite/server.js:23:17)\n' +
+  '    at Module._compile (internal/modules/cjs/loader.js:1063:30)\n' +
+  '    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)'
+2021-08-21T17:16:06+07:00 info: '::1 - - [21/Aug/2021:10:16:06 +0000] "POST /api/post HTTP/1.1" 200 55 "-" "PostmanRuntime/7.26.8"\n'
+2021-08-21T17:19:15+07:00 error: "uncaughtException: Unexpected token 'catch'\n" +
+  '/home/dalang/CamWebsite/apis/post/postApi.js:115\n' +
+  '        } catch (error) {\n' +
+  '          ^^^^^\n' +
+  '\n' +
+  "SyntaxError: Unexpected token 'catch'\n" +
+  '    at wrapSafe (internal/modules/cjs/loader.js:979:16)\n' +
+  '    at Module._compile (internal/modules/cjs/loader.js:1027:27)\n' +
+  '    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)\n' +
+  '    at Module.load (internal/modules/cjs/loader.js:928:32)\n' +
+  '    at Function.Module._load (internal/modules/cjs/loader.js:769:14)\n' +
+  '    at Module.require (internal/modules/cjs/loader.js:952:19)\n' +
+  '    at require (internal/modules/cjs/helpers.js:88:18)\n' +
+  '    at Object.<anonymous> (/home/dalang/CamWebsite/server.js:23:17)\n' +
+  '    at Module._compile (internal/modules/cjs/loader.js:1063:30)\n' +
+  '    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)'
+2021-08-21T17:19:22+07:00 error: "uncaughtException: Unexpected token 'catch'\n" +
+  '/home/dalang/CamWebsite/apis/post/postApi.js:115\n' +
+  '        } catch (error) {\n' +
+  '          ^^^^^\n' +
+  '\n' +
+  "SyntaxError: Unexpected token 'catch'\n" +
+  '    at wrapSafe (internal/modules/cjs/loader.js:979:16)\n' +
+  '    at Module._compile (internal/modules/cjs/loader.js:1027:27)\n' +
+  '    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)\n' +
+  '    at Module.load (internal/modules/cjs/loader.js:928:32)\n' +
+  '    at Function.Module._load (internal/modules/cjs/loader.js:769:14)\n' +
+  '    at Module.require (internal/modules/cjs/loader.js:952:19)\n' +
+  '    at require (internal/modules/cjs/helpers.js:88:18)\n' +
+  '    at Object.<anonymous> (/home/dalang/CamWebsite/server.js:23:17)\n' +
+  '    at Module._compile (internal/modules/cjs/loader.js:1063:30)\n' +
+  '    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)'
+2021-08-21T17:19:59+07:00 error: "uncaughtException: Unexpected token 'catch'\n" +
+  '/home/dalang/CamWebsite/apis/post/postApi.js:115\n' +
+  '        } catch (error) {\n' +
+  '          ^^^^^\n' +
+  '\n' +
+  "SyntaxError: Unexpected token 'catch'\n" +
+  '    at wrapSafe (internal/modules/cjs/loader.js:979:16)\n' +
+  '    at Module._compile (internal/modules/cjs/loader.js:1027:27)\n' +
+  '    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)\n' +
+  '    at Module.load (internal/modules/cjs/loader.js:928:32)\n' +
+  '    at Function.Module._load (internal/modules/cjs/loader.js:769:14)\n' +
+  '    at Module.require (internal/modules/cjs/loader.js:952:19)\n' +
+  '    at require (internal/modules/cjs/helpers.js:88:18)\n' +
+  '    at Object.<anonymous> (/home/dalang/CamWebsite/server.js:23:17)\n' +
+  '    at Module._compile (internal/modules/cjs/loader.js:1063:30)\n' +
+  '    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)'
+2021-08-21T17:21:52+07:00 info: '::1 - - [21/Aug/2021:10:21:52 +0000] "POST /api/post HTTP/1.1" 500 46 "-" "PostmanRuntime/7.26.8"\n'
+2021-08-21T17:22:48+07:00 info: '::1 - - [21/Aug/2021:10:22:48 +0000] "POST /api/post HTTP/1.1" 500 46 "-" "PostmanRuntime/7.26.8"\n'
+2021-08-21T17:23:25+07:00 info: '::1 - - [21/Aug/2021:10:23:25 +0000] "POST /api/post HTTP/1.1" 500 27 "-" "PostmanRuntime/7.26.8"\n'
+2021-08-21T17:24:57+07:00 info: '::1 - - [21/Aug/2021:10:24:57 +0000] "POST /api/post HTTP/1.1" 500 27 "-" "PostmanRuntime/7.26.8"\n'
+2021-08-21T17:31:09+07:00 error: "uncaughtException: Identifier 'require' has already been declared\n" +
+  '/home/dalang/CamWebsite/apis/post/postApi.js:12\n' +
+  "const { require } = require('app-root-path')\n" +
+  '        ^\n' +
+  '\n' +
+  "SyntaxError: Identifier 'require' has already been declared\n" +
+  '    at wrapSafe (internal/modules/cjs/loader.js:979:16)\n' +
+  '    at Module._compile (internal/modules/cjs/loader.js:1027:27)\n' +
+  '    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)\n' +
+  '    at Module.load (internal/modules/cjs/loader.js:928:32)\n' +
+  '    at Function.Module._load (internal/modules/cjs/loader.js:769:14)\n' +
+  '    at Module.require (internal/modules/cjs/loader.js:952:19)\n' +
+  '    at require (internal/modules/cjs/helpers.js:88:18)\n' +
+  '    at Object.<anonymous> (/home/dalang/CamWebsite/server.js:23:17)\n' +
+  '    at Module._compile (internal/modules/cjs/loader.js:1063:30)\n' +
+  '    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)'
+2021-08-21T17:31:33+07:00 error: "uncaughtException: Cannot find module 'streamifier'\n" +
+  'Require stack:\n' +
+  '- /home/dalang/CamWebsite/utils/upLoadCloudinary.js\n' +
+  '- /home/dalang/CamWebsite/apis/post/postApi.js\n' +
+  '- /home/dalang/CamWebsite/server.js\n' +
+  '- /home/dalang/CamWebsite/index.js\n' +
+  "Error: Cannot find module 'streamifier'\n" +
+  'Require stack:\n' +
+  '- /home/dalang/CamWebsite/utils/upLoadCloudinary.js\n' +
+  '- /home/dalang/CamWebsite/apis/post/postApi.js\n' +
+  '- /home/dalang/CamWebsite/server.js\n' +
+  '- /home/dalang/CamWebsite/index.js\n' +
+  '    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:880:15)\n' +
+  '    at Function.Module._load (internal/modules/cjs/loader.js:725:27)\n' +
+  '    at Module.require (internal/modules/cjs/loader.js:952:19)\n' +
+  '    at require (internal/modules/cjs/helpers.js:88:18)\n' +
+  '    at Object.<anonymous> (/home/dalang/CamWebsite/utils/upLoadCloudinary.js:2:19)\n' +
+  '    at Module._compile (internal/modules/cjs/loader.js:1063:30)\n' +
+  '    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)\n' +
+  '    at Module.load (internal/modules/cjs/loader.js:928:32)\n' +
+  '    at Function.Module._load (internal/modules/cjs/loader.js:769:14)\n' +
+  '    at Module.require (internal/modules/cjs/loader.js:952:19)'
+2021-08-21T17:31:34+07:00 error: "uncaughtException: Cannot find module 'streamifier'\n" +
+  'Require stack:\n' +
+  '- /home/dalang/CamWebsite/utils/upLoadCloudinary.js\n' +
+  '- /home/dalang/CamWebsite/apis/post/postApi.js\n' +
+  '- /home/dalang/CamWebsite/server.js\n' +
+  '- /home/dalang/CamWebsite/index.js\n' +
+  "Error: Cannot find module 'streamifier'\n" +
+  'Require stack:\n' +
+  '- /home/dalang/CamWebsite/utils/upLoadCloudinary.js\n' +
+  '- /home/dalang/CamWebsite/apis/post/postApi.js\n' +
+  '- /home/dalang/CamWebsite/server.js\n' +
+  '- /home/dalang/CamWebsite/index.js\n' +
+  '    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:880:15)\n' +
+  '    at Function.Module._load (internal/modules/cjs/loader.js:725:27)\n' +
+  '    at Module.require (internal/modules/cjs/loader.js:952:19)\n' +
+  '    at require (internal/modules/cjs/helpers.js:88:18)\n' +
+  '    at Object.<anonymous> (/home/dalang/CamWebsite/utils/upLoadCloudinary.js:2:19)\n' +
+  '    at Module._compile (internal/modules/cjs/loader.js:1063:30)\n' +
+  '    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)\n' +
+  '    at Module.load (internal/modules/cjs/loader.js:928:32)\n' +
+  '    at Function.Module._load (internal/modules/cjs/loader.js:769:14)\n' +
+  '    at Module.require (internal/modules/cjs/loader.js:952:19)'
+2021-08-21T17:33:56+07:00 info: '::1 - - [21/Aug/2021:10:33:56 +0000] "POST /api/post HTTP/1.1" 500 27 "-" "PostmanRuntime/7.26.8"\n'
+2021-08-21T17:34:22+07:00 info: '::1 - - [21/Aug/2021:10:34:22 +0000] "POST /api/post HTTP/1.1" 500 27 "-" "PostmanRuntime/7.26.8"\n'
+2021-08-21T17:35:11+07:00 info: '::1 - - [21/Aug/2021:10:35:11 +0000] "POST /api/post HTTP/1.1" 500 27 "-" "PostmanRuntime/7.26.8"\n'
+2021-08-21T17:36:38+07:00 info: '::1 - - [21/Aug/2021:10:36:38 +0000] "POST /api/post HTTP/1.1" 500 27 "-" "PostmanRuntime/7.26.8"\n'
+2021-08-21T17:37:51+07:00 info: '::1 - - [21/Aug/2021:10:37:51 +0000] "POST /api/post HTTP/1.1" 500 27 "-" "PostmanRuntime/7.26.8"\n'
+2021-08-21T17:38:20+07:00 info: '::1 - - [21/Aug/2021:10:38:20 +0000] "POST /api/post HTTP/1.1" 500 27 "-" "PostmanRuntime/7.26.8"\n'
+2021-08-21T17:39:22+07:00 info: '::1 - - [21/Aug/2021:10:39:22 +0000] "POST /api/post HTTP/1.1" 500 27 "-" "PostmanRuntime/7.26.8"\n'
+2021-08-21T18:10:50+07:00 info: '::1 - - [21/Aug/2021:11:10:50 +0000] "GET /api/api-docs/ HTTP/1.1" 304 - "-" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"\n'
+2021-08-21T18:10:50+07:00 info: '::1 - - [21/Aug/2021:11:10:50 +0000] "GET /api/api-docs/swagger-ui-init.js HTTP/1.1" 200 60963 "http://localhost:5000/api/api-docs/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"\n'
+2021-08-21T18:10:50+07:00 info: '::1 - - [21/Aug/2021:11:10:50 +0000] "GET /api/api-docs/swagger-ui.css HTTP/1.1" 200 143669 "http://localhost:5000/api/api-docs/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"\n'
+2021-08-21T18:10:50+07:00 info: '::1 - - [21/Aug/2021:11:10:50 +0000] "GET /api/api-docs/swagger-ui-standalone-preset.js HTTP/1.1" 200 338084 "http://localhost:5000/api/api-docs/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"\n'
+2021-08-21T18:10:50+07:00 info: '::1 - - [21/Aug/2021:11:10:50 +0000] "GET /api/api-docs/swagger-ui-bundle.js HTTP/1.1" 200 1100495 "http://localhost:5000/api/api-docs/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"\n'
+2021-08-21T18:10:59+07:00 info: '::1 - - [21/Aug/2021:11:10:59 +0000] "GET /api/post/ HTTP/1.1" 200 1641 "http://localhost:5000/api/api-docs/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"\n'
+2021-08-21T18:11:10+07:00 info: '::1 - - [21/Aug/2021:11:11:10 +0000] "GET /api/product/ HTTP/1.1" 304 - "http://localhost:5000/api/api-docs/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"\n'
+2021-08-21T18:11:30+07:00 info: '::1 - - [21/Aug/2021:11:11:30 +0000] "POST /api/user/login HTTP/1.1" 200 207 "http://localhost:5000/api/api-docs/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"\n'
+2021-08-21T18:11:53+07:00 info: '::1 - - [21/Aug/2021:11:11:53 +0000] "PUT /api/product/9 HTTP/1.1" 200 54 "http://localhost:5000/api/api-docs/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"\n'
+2021-08-21T18:12:11+07:00 info: '::1 - - [21/Aug/2021:11:12:11 +0000] "PUT /api/product/9 HTTP/1.1" 200 54 "http://localhost:5000/api/api-docs/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"\n'
+2021-08-21T18:12:20+07:00 info: '::1 - - [21/Aug/2021:11:12:20 +0000] "PUT /api/product/9 HTTP/1.1" 200 54 "http://localhost:5000/api/api-docs/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"\n'
+2021-08-21T18:12:27+07:00 info: '::1 - - [21/Aug/2021:11:12:27 +0000] "PUT /api/product/9 HTTP/1.1" 200 54 "http://localhost:5000/api/api-docs/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"\n'
+2021-08-21T18:12:34+07:00 info: '::1 - - [21/Aug/2021:11:12:34 +0000] "PUT /api/product/9 HTTP/1.1" 200 54 "http://localhost:5000/api/api-docs/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"\n'
+2021-08-21T18:12:45+07:00 info: '::1 - - [21/Aug/2021:11:12:45 +0000] "GET /api/product/ HTTP/1.1" 200 1593 "http://localhost:5000/api/api-docs/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"\n'
+2021-08-21T18:16:32+07:00 info: '::1 - - [21/Aug/2021:11:16:32 +0000] "POST /api/product/ HTTP/1.1" 200 56 "http://localhost:5000/api/api-docs/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"\n'
+2021-08-21T18:18:46+07:00 info: '::1 - - [21/Aug/2021:11:18:46 +0000] "GET /api/api-docs/ HTTP/1.1" 304 - "-" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"\n'
+2021-08-21T18:18:46+07:00 info: '::1 - - [21/Aug/2021:11:18:46 +0000] "GET /api/api-docs/swagger-ui.css HTTP/1.1" 304 - "http://localhost:5000/api/api-docs/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"\n'
+2021-08-21T18:18:46+07:00 info: '::1 - - [21/Aug/2021:11:18:46 +0000] "GET /api/api-docs/swagger-ui-bundle.js HTTP/1.1" 304 - "http://localhost:5000/api/api-docs/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"\n'
+2021-08-21T18:18:46+07:00 info: '::1 - - [21/Aug/2021:11:18:46 +0000] "GET /api/api-docs/swagger-ui-init.js HTTP/1.1" 200 61842 "http://localhost:5000/api/api-docs/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"\n'
+2021-08-21T18:18:46+07:00 info: '::1 - - [21/Aug/2021:11:18:46 +0000] "GET /api/api-docs/swagger-ui-standalone-preset.js HTTP/1.1" 304 - "http://localhost:5000/api/api-docs/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"\n'
+2021-08-21T18:18:47+07:00 info: '::1 - - [21/Aug/2021:11:18:47 +0000] "GET /api/api-docs/favicon-32x32.png HTTP/1.1" 200 628 "http://localhost:5000/api/api-docs/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"\n'
+2021-08-21T18:19:05+07:00 info: '::1 - - [21/Aug/2021:11:19:05 +0000] "GET /api/api-docs/ HTTP/1.1" 304 - "-" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"\n'
+2021-08-21T18:19:05+07:00 info: '::1 - - [21/Aug/2021:11:19:05 +0000] "GET /api/api-docs/swagger-ui.css HTTP/1.1" 304 - "http://localhost:5000/api/api-docs/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"\n'
+2021-08-21T18:19:05+07:00 info: '::1 - - [21/Aug/2021:11:19:05 +0000] "GET /api/api-docs/swagger-ui-bundle.js HTTP/1.1" 304 - "http://localhost:5000/api/api-docs/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"\n'
+2021-08-21T18:19:05+07:00 info: '::1 - - [21/Aug/2021:11:19:05 +0000] "GET /api/api-docs/swagger-ui-init.js HTTP/1.1" 200 61844 "http://localhost:5000/api/api-docs/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"\n'
+2021-08-21T18:19:05+07:00 info: '::1 - - [21/Aug/2021:11:19:05 +0000] "GET /api/api-docs/swagger-ui-standalone-preset.js HTTP/1.1" 304 - "http://localhost:5000/api/api-docs/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"\n'
+2021-08-21T18:19:06+07:00 info: '::1 - - [21/Aug/2021:11:19:06 +0000] "GET /api/api-docs/favicon-32x32.png HTTP/1.1" 304 - "http://localhost:5000/api/api-docs/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"\n'
+2021-08-21T18:19:10+07:00 info: '::1 - - [21/Aug/2021:11:19:10 +0000] "GET /api/post/ HTTP/1.1" 304 - "http://localhost:5000/api/api-docs/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"\n'
+2021-08-21T18:19:49+07:00 info: '::1 - - [21/Aug/2021:11:19:49 +0000] "GET /api/post/get-by-slug/stringddasdada-1629540966422 HTTP/1.1" 200 243 "http://localhost:5000/api/api-docs/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"\n'

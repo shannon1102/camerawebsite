@@ -290,11 +290,11 @@ class ProductService {
                     return reject(err)
                 }
                 const query1 = `UPDATE product_image
-            SET url_image1 = ${mysql.escape(url_image1)},
-            url_image2 = ${mysql.escape(url_image2)},
-            url_image3 = ${mysql.escape(url_image3)},
-            url_image4 = ${mysql.escape(url_image4)}
-            WHERE product_id = ${mysql.escape(id)}
+                SET url_image1 = ${mysql.escape(url_image1)},
+                url_image2 = ${mysql.escape(url_image2)},
+                url_image3 = ${mysql.escape(url_image3)},
+                url_image4 = ${mysql.escape(url_image4)}
+                WHERE product_id = ${mysql.escape(id)}
             `
                 const [err1, result1] = await to(this.mysqlDb.poolQuery(query1))
                 if (err1) {

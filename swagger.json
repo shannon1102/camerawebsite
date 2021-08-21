@@ -279,6 +279,43 @@
         }
       }
     },
+    "/post/get-by-slug/{slug}": {
+      "get": {
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "slug",
+            "type": "string",
+            "in": "path",
+            "required": true
+          }
+        ],
+        "tags": [
+          "Post Api"
+        ],
+        "summary": "Get Post by Id",
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "success",
+            "schema": {
+              "$ref": "#/definitions/post"
+            }
+          },
+          "500": {
+            "description": "error",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          }
+        }
+      }
+    },
     "/post/get-by-tag-id/{tag_id}": {
       "get": {
         "consumes": [
