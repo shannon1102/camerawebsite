@@ -6,13 +6,9 @@ const {checkRequiredFieldInBody} = require('../../middleware')
 const PostService = require('../../services/postService/postService')
 
 const { verifyToken,adminRole } = require('../../middleware/verifyToken')
-// const upload =require('../../utils/multer')
 const  multer = require('multer');
 const cloudinary = require('cloudinary')
 const {uploadFromBuffer} = require('../../utils/upLoadCloudinary')
-
-// import Datauri from 'datauri';
-// import path from 'path';
 const postApi = express.Router()
 
 
@@ -89,8 +85,8 @@ postApi.get('/get-by-tag-slug/:tag_slug', async (req, res, next) => {
     }
 })
 //checkRequiredFieldInBody(['title', 'content','tag_id'])
-var cpUpload = upload.fields([{ name: 'images',maxCount:1}]);
-postApi.post('/',verifyToken,adminRole,cpUpload,
+// var cpUpload = upload.fields([{ name: 'images',maxCount:1}]);
+postApi.post('/',verifyToken,adminRole,
     
     async (req, res, next) => {
         console.log("SDDSDDS")
