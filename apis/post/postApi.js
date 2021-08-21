@@ -87,11 +87,10 @@ postApi.get('/get-by-tag-slug/:tag_slug', async (req, res, next) => {
 //checkRequiredFieldInBody(['title', 'content','tag_id'])
 // var cpUpload = upload.fields([{ name: 'images',maxCount:1}]);
 postApi.post('/',verifyToken,adminRole,
-    
     async (req, res, next) => {
-        console.log("SDDSDDS")
-        console.log(req.files.images)
-        console.log(req.body)
+        // console.log("SDDSDDS")
+        // console.log(req.files.images)
+        // console.log(req.body)
         try {
             // let result = await uploadFromBuffer(req);
             // console.log(result);
