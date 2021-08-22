@@ -1,31 +1,47 @@
 let cloudinary = require("cloudinary").v2;
 let streamifier = require('streamifier');
-cloudinary.config({ 
-    cloud_name: process.env.CLOUD_NAME, 
-    api_key: process.env.API_KEY, 
-    api_secret: process.env.API_SECRET 
+let {unlink} = require('fs')
+cloudinary.config({
+  cloud_name: process.env.CLOUD_NAME,
+  api_key: process.env.API_KEY,
+  api_secret: process.env.API_SECRET
 })
 
-let uploadFromBuffer = (req) => {
+let upLoadCloudinary = (filename) => {
 
-   return new Promise((resolve, reject) => {
+  return new Promise((resolve, reject) => {
 
-     let cld_upload_stream = cloudinary.v2.uploader.upload_stream(
-      {
-        folder: "foo"
-      },
-      (error,result) => {
-
-        if (result) {
-          resolve(result);
-        } else {
-          reject(error);
-         }
-       }
-     );
-
-     streamifier.createReadStream(req.files.images[0].buffer).pipe(cld_upload_stream);
-   });
+    cloudinary.uploader.upload(filename,{folder: 'post'}, function (error, result) {
+      
+      // console.log(result, error)
+      if (result) {
+        resolve(result);
+        unlink(filename, (err) => {
+          if (err) throw err;
+          console.log('path/file.txt was deleted');
+        });
+      } else {
+        reject(error);
+      }
+    }
+    );
+  });
 
 };
-module.exports = Object.assign({},{uploadFromBuffer})
+let deleteImageCloudinary = (public_url) => {
+  return new Promise((resolve, reject) => {
+
+    cloudinary.uploader.destroy(public_url, function (error, result) {
+      
+      // console.log(result, error)
+      if (err) {
+        reject(error);
+       
+      } else {
+        resolve(`Delete succesfully`,result);
+      }
+    });
+  });
+
+}
+module.exports = Object.assign({}, { upLoadCloudinary,deleteImageCloudinary })

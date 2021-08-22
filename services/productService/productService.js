@@ -53,6 +53,56 @@ class ProductService {
 
             });
     }
+
+    getFilterByPrice(minPrice,maxPrice,productsPerPage,pageNumber,orderType,search) {
+        return new Promise(
+            async (resolve, reject) => {
+                let offsetDb = 0, orderByDb;
+                orderType = orderType ? orderType : 2
+                pageNumber = pageNumber ? pageNumber : 1
+                productsPerPage = productsPerPage ? productsPerPage : 100
+                offsetDb = productsPerPage * (pageNumber - 1)
+                minPrice = minPrice ? minPrice : 0
+                maxPrice = maxPrice ? maxPrice : 10000000000000
+                // search = search ? search : ""
+                if (search) {
+                    var stringSearch = search.split(' ').map(element => {
+                        return `p.name LIKE ${mysql.escape('%' + element + '%')} OR p.description LIKE ${mysql.escape('%' + element + '%')}`
+                    }).join(' OR ')
+                    console.log(stringSearch);
+                } else {
+                    stringSearch = `p.name LIKE ${mysql.escape('%' + "" + '%')} OR p.description LIKE ${mysql.escape('%' + "" + '%')}`
+                }
+                if (orderType == orderTypeSetting.ASC) {
+                    orderByDb = 'ASC'
+                } else {
+                    orderByDb = 'DESC'
+                }
+
+                const query =
+                    `SELECT p.*,pi.url_image1,pi.url_image2,pi.url_image3,pi.url_image4 
+                    FROM product as p
+                    JOIN product_image AS pi ON p.id = pi.product_id
+                    WHERE 
+                    ((p.price*p.discount/100) >= ${mysql.escape(minPrice)}  
+                    AND (p.price*p.discount/100) <= ${mysql.escape(maxPrice)})
+                    AND (${stringSearch})
+                    ORDER BY p.create_at ${mysql.escape(orderByDb).split(`'`)[1]}
+                    LIMIT ${productsPerPage}
+                    OFFSET ${mysql.escape(offsetDb)}`
+                console.log(query)
+                let [err, listProduct] = await to(this.mysqlDb.poolQuery(query))
+                console.log(listProduct)
+                let listProductReturn = this.returnListProduct(listProduct)
+                if (err) {
+                    logger.error(`[productService][getProducts] errors : `, err)
+                    return reject(err)
+                } else {
+                    return resolve(listProductReturn)
+                }
+
+            });
+    }
     getProductsByCategoryId(category_id, productsPerPage, pageNumber, orderType, search) {
         return new Promise(
             async (resolve, reject) => {

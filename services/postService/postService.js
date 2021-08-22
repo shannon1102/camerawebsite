@@ -2,7 +2,8 @@
 const mysql = require('mysql');
 const logger = require('../../logger');
 const {to} = require('../../helper/to');
-const {createSlug} = require('../../utils/index')
+const {deleteImageCloudinary} =require('../../utils/upLoadCloudinary')
+const {createSlug} = require('../../utils/index');
 class PostService {
     constructor(mysqlDb) {
         this.mysqlDb = mysqlDb
@@ -167,6 +168,11 @@ class PostService {
     deletePost(id) {
         return new Promise(async (resolve, reject) => {
             try {
+                // const query = `
+                //     SELECT image_cloud_id FROM post
+                //     WHERE id = ${mysql.escape(id)}
+                // `
+
                 const query = `
                     DELETE FROM post
                     WHERE id = ${mysql.escape(id)}

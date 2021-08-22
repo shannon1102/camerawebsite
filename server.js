@@ -16,6 +16,7 @@ app.use(morgan('combined', {
     stream: logger.stream
 }))
 app.use(cors())
+app.use(express.static(__dirname + '/public'))
 
 const backendRoute = express.Router();
 
