@@ -400,6 +400,20 @@
         ],
         "parameters": [
           {
+            "name": "minPrice",
+            "type": "integer",
+            "in": "query",
+            "description": "MinPrice",
+            "required": false
+          },
+          {
+            "name": "maxPrice",
+            "in": "query",
+            "type":"integer",
+            "description": "Max Price ",
+            "required": false
+          },
+          {
             "name": "productsPerPage",
             "in": "query",
             "description": "Max products can be display in one page",
@@ -514,78 +528,6 @@
                 "insertedId": {
                   "type": "integer"
                 }
-              }
-            }
-          },
-          "500": {
-            "description": "error",
-            "schema": {
-              "$ref": "#/definitions/error"
-            }
-          }
-        }
-      }
-    },
-    "/product/filter/by-price/": {
-      "get": {
-        "consumes": [
-          "application/json"
-        ],
-        "produces": [
-          "application/json"
-        ],
-        "parameters": [
-          {
-            "name": "minPrice",
-            "type": "integer",
-            "in": "query",
-            "description": "MinPrice",
-            "required": false
-          },
-          {
-            "name": "maxPrice",
-            "in": "query",
-            "type":"integer",
-            "description": "Max Price ",
-            "required": false
-          },
-          {
-            "name": "productsPerPage",
-            "in": "query",
-            "description": "Max products can be display in one page",
-            "required": false
-          },
-          {
-            "name": "pageNumber",
-            "in": "query",
-            "description": "Page number",
-            "required": false
-          },
-          {
-            "name": "orderType",
-            "in": "query",
-            "description": "Order type to display: 1-oldest 2-newest ",
-            "required": false
-          },
-          {
-            "name": "search",
-            "in": "query",
-            "description": "for search request for Front End",
-            "required": false
-          }
-        ],
-        "tags": [
-          "Product Api"
-        ],
-        "summary": "Get Products",
-        "description": "",
-        "responses": {
-          "200": {
-            "description": "success",
-            "schema": {
-              "type": "array",
-              "items": {
-                "$ref": "#/definitions/product"
               }
             }
           },

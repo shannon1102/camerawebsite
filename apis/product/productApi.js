@@ -9,21 +9,9 @@ const {checkRequiredFieldInBody,checkRequiredFieldInQuery} = require('../../midd
 const {verifyToken,adminRole} = require('../../middleware/verifyToken');
 const {removeAccent} =  require('../../utils/index');
 productApi.get('/', (req,res,next) => {
-    let {productsPerPage,pageNumber,orderType,search} = req.query;
-    productService
-    .getProducts(productsPerPage,pageNumber,orderType,search)
-    .then(listProduct => {
-        return res.status(200).json({status:200,message:"Success",data: listProduct})
-    })
-    .catch(err=>{
-        return res.status(500).json({status:500,message: err})
-    })
-
-})
-productApi.get('/filter/by-price/', (req,res,next) => {
     let {minPrice,maxPrice,productsPerPage,pageNumber,orderType,search} = req.query;
     productService
-    .getFilterByPrice(minPrice,maxPrice,productsPerPage,pageNumber,orderType,search)
+    .getProducts(minPrice,maxPrice,productsPerPage,pageNumber,orderType,search)
     .then(listProduct => {
         return res.status(200).json({status:200,message:"Success",data: listProduct})
     })
