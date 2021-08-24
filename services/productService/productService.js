@@ -17,6 +17,10 @@ class ProductService {
                 pageNumber = pageNumber ? pageNumber : 1
                 productsPerPage = productsPerPage ? productsPerPage : 100
                 offsetDb = productsPerPage * (pageNumber - 1)
+                if(minPrice == -1  && maxPrice == -1 ) {
+                    minPrice = 0
+                    maxPrice = 10000000000000
+                }
                 minPrice = minPrice ? minPrice : 0
                 maxPrice = maxPrice ? maxPrice : 10000000000000
                 // search = search ? search : ""
