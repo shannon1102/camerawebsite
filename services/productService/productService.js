@@ -39,7 +39,7 @@ class ProductService {
                     FROM product as p
             JOIN product_image AS pi ON p.id = pi.product_id
             WHERE 
-            ((p.price*(100-p.discount/100)) >= ${minPrice}  
+            ((p.price*(100-p.discount)/100) >= ${minPrice}  
                     AND (p.price*(100-p.discount)/100) <= ${maxPrice})
                     AND (${stringSearch})          
             ORDER BY p.create_at ${mysql.escape(orderByDb).split(`'`)[1]}
@@ -274,7 +274,6 @@ class ProductService {
 
         return new Promise(async (resolve, reject) => {
             try {
-                const newSlug = createSlug(name);
                 const url_image1 = list_product_images[0] ? list_product_images[0] : null;
                 const url_image2 = list_product_images[1] ? list_product_images[1] : null;
                 const url_image3 = list_product_images[2] ? list_product_images[2] : null;
@@ -287,8 +286,7 @@ class ProductService {
                detail = ${mysql.escape(detail)},
                price = ${mysql.escape(price)},
                discount = ${mysql.escape(discount)},
-               category_id = ${mysql.escape(category_id)},
-               slug = ${mysql.escape(newSlug)}
+               category_id = ${mysql.escape(category_id)}
                WHERE id = ${mysql.escape(id)}
                `
                 const [err, result] = await to(this.mysqlDb.poolQuery(query))
@@ -353,6 +351,7 @@ class ProductService {
                 "id": e.id,
                 "name": e.name,
                 "description": e.description,
+                "detail": e.detail,
                 "price": e.price,
                 "discount": e.discount,
                 "new_price": e.price - e.price * (e.discount / 100),
@@ -370,6 +369,7 @@ class ProductService {
             "id": e.id,
             "name": e.name,
             "description": e.description,
+            "detail": e.detail,
             "price": e.price,
             "discount": e.discount,
             "new_price": e.price - e.price * (e.discount / 100),

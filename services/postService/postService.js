@@ -143,14 +143,12 @@ class PostService {
     }
     updatePost(id, title,url_image,content,tag_id) {
         return new Promise(async (resolve, reject) => {
-            const newSlug =  createSlug(title);
             const query = `
                 UPDATE post SET 
                 title = ${mysql.escape(title)},
                 content = ${mysql.escape(content)},
                 url_image = ${mysql.escape(url_image)},
-                tag_id = ${mysql.escape(tag_id)},
-                slug = ${mysql.escape(newSlug)}
+                tag_id = ${mysql.escape(tag_id)}
                 WHERE id = ${mysql.escape(id)}
             `
             const [err, result] = await to(this.mysqlDb.poolQuery(query))

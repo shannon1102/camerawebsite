@@ -12,14 +12,7 @@ const {upLoadCloudinary} = require('../../utils/upLoadCloudinary')
 const postApi = express.Router()
 const mysqlDb = new MysqlDB()
 const postService = new PostService(mysqlDb)
-// cloudinary.config({ 
-//     cloud_name: process.env.CLOUD_NAME, 
-//     api_key: process.env.API_KEY, 
-//     api_secret: process.env.API_SECRET 
-// })
 
-// const storage = multer.memoryStorage()
-// const upload = multer({ storage: storage })
 
 postApi.get('/', async (req, res, next) => {
     try {
@@ -83,22 +76,10 @@ postApi.get('/get-by-tag-slug/:tag_slug', async (req, res, next) => {
     }
 })
 
-postApi.post('/',verifyToken,adminRole,upload.single('image'),async (req, res, next) => {
+postApi.post('/',verifyToken,adminRole,checkRequiredFieldInBody(['title', 'content']),async (req, res, next) => {
         
         try {
             let {title,url_image, content,tag_id} = req.body
-
-            console.log(req.file.path)
-            await upLoadCloudinary(req.file.path)
-            .then(result=> {
-                console.log(result)
-                url_image = result.secure_url;
-                let image_public_id = result.public_id;
-            })
-            .catch(err=>{
-                console.log(err)
-            })
-            // url_image = 
             const insertedId = await  postService.createPost(title,url_image,content,tag_id)
 
             return res.status(200).json({status:200,message: 'Create new post successfully'})
