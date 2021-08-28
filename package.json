@@ -1,7 +1,7 @@
 {
   "name": "backend",
   "version": "1.0.0",
-  "description": "gmvwebsite",
+  "description": "Camera",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Err or: no test specified\" && exit 1",
@@ -9,7 +9,7 @@
     "dev": "nodemon index.js"
   },
   "keywords": [
-    "gmv"
+    "camera"
   ],
   "author": "hhv",
   "license": "ISC",
