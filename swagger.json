@@ -621,6 +621,20 @@
             "required": true
           },
           {
+            "name": "minPrice",
+            "in": "query",
+            "type":"integer",
+            "description": "Min Price ",
+            "required": false
+          },
+          { 
+            "name": "maxPrice",
+            "in": "query",
+            "type":"integer",
+            "description": "Max Price ",
+            "required": false
+          },
+          {
             "name": "productsPerPage",
             "in": "query",
             "description": "Max products can be display in one page",
@@ -2219,6 +2233,70 @@
           "User Api"
         ],
         "summary": "Login User",
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "success",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "message": {
+                  "type": "string"
+                },
+                "username": {
+                  "type": "string"
+                },
+                "access-token": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "error",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          }
+        }
+      }
+    },
+    "/user/change-password": {
+      "post": {
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "x-access-token",
+            "in": "header",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "oldPassword": {
+                  "type": "string"
+                },
+                "newPassword": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        ],
+        "tags": [
+          "User Api"
+        ],
+        "summary": "Admin change password",
         "description": "",
         "responses": {
           "200": {

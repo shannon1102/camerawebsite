@@ -98,43 +98,6 @@ class ProductService {
             });
 
     }
-    // getProductsByCategoryName(main_category, category, productsPerPage, pageNumber, orderType, search) {
-    //     return new Promise(
-    //         async (resolve, reject) => {
-    //             let offsetDb = 0, orderByDb;
-    //             orderType = orderType ? orderType : 2
-    //             pageNumber = pageNumber ? pageNumber : 1
-    //             productsPerPage = productsPerPage ? productsPerPage : 10
-    //             offsetDb = productsPerPage * (pageNumber - 1)
-    //             search = search ? search : ""
-    //             if (orderType == orderTypeSetting.ASC) {
-    //                 orderByDb = 'ASC'
-    //             } else {
-    //                 orderByDb = 'DESC'
-    //             }
-    //             const query =
-    //                 `SELECT p.* FROM product as p
-    //         JOIN category ON p.category_id = category.id 
-    //         JOIN main_category ON main_category.id = category.main_category_id 
-    //         WHERE  main_category.name = ${mysql.escape(main_category)}
-    //         AND category.name = ${mysql.escape(category)}
-    //         AND (p.name LIKE ${mysql.escape('%' + search + '%')}
-    //         OR p.description LIKE ${mysql.escape('%' + search + '%')})
-    //         ORDER BY p.create_at ${mysql.escape(orderByDb).split(`'`)[1]}
-    //         LIMIT ${productsPerPage}
-    //         OFFSET ${mysql.escape(offsetDb)}`
-    //             console.log(query)
-    //             let [err, listProduct] = await to(this.mysqlDb.poolQuery(query))
-    //             if (err) {
-    //                 logger.error(`[productService][getProducts] errors : `, err)
-    //                 return reject(err)
-    //             } else {
-    //                 return resolve(listProduct)
-    //             }
-
-    //         });
-
-    // }
     getProductById(id) {
 
         return new Promise(async (resolve, reject) => {
@@ -160,7 +123,7 @@ class ProductService {
             return resolve(this.returnProduct(productResult[0]))
         })
     }
-    getProductsByCategorySlug(category_slug, productsPerPage, pageNumber, orderType, search) {
+    getProductsByCategorySlug(category_slug,minPrice,maxPrice,productsPerPage, pageNumber, orderType, search) {
         return new Promise(
             async (resolve, reject) => {
                 let offsetDb = 0, orderByDb;
@@ -168,23 +131,39 @@ class ProductService {
                 pageNumber = pageNumber ? pageNumber : 1
                 productsPerPage = productsPerPage ? productsPerPage : 100
                 offsetDb = productsPerPage * (pageNumber - 1)
-                search = search ? search : ""
+                if(minPrice == -1  && maxPrice == -1 ) {
+                    minPrice = 0
+                    maxPrice = 10000000000000
+                }
+                minPrice = minPrice ? minPrice : 0
+                maxPrice = maxPrice ? maxPrice : 10000000000000
+                // search = search ? search : ""
+                if (search) {
+                    var stringSearch = search.split(' ').map(element => {
+                        return `p.name LIKE ${mysql.escape('%' + element + '%')} OR p.description LIKE ${mysql.escape('%' + element + '%')}`
+                    }).join(' OR ')
+                    console.log(stringSearch);
+                } else {
+                    stringSearch = `p.name LIKE ${mysql.escape('%' + "" + '%')} OR p.description LIKE ${mysql.escape('%' + "" + '%')}`
+                }
                 if (orderType == orderTypeSetting.ASC) {
                     orderByDb = 'ASC'
                 } else {
                     orderByDb = 'DESC'
                 }
+                
                 const query =
                     `SELECT p.*,c.slug AS category_slug,pi.url_image1,pi.url_image2,pi.url_image3,pi.url_image4 FROM product as p
                     JOIN category AS c ON p.category_id = c.id
                     JOIN product_image AS pi ON pi.product_id= p.id
 
-            WHERE c.slug = ${mysql.escape(category_slug)}
-            AND ( p.name LIKE ${mysql.escape('%' + search + '%')}
-            OR p.description LIKE ${mysql.escape('%' + search + '%')})
-            ORDER BY p.create_at ${mysql.escape(orderByDb).split(`'`)[1]}
-            LIMIT ${productsPerPage}
-            OFFSET ${mysql.escape(offsetDb)}`
+                    WHERE c.slug = ${mysql.escape(category_slug)}
+                    AND ((p.price*(100-p.discount)/100) >= ${minPrice}  
+                        AND (p.price*(100-p.discount)/100) <= ${maxPrice})
+                    AND (${stringSearch})          
+                    ORDER BY p.create_at ${mysql.escape(orderByDb).split(`'`)[1]}
+                    LIMIT ${productsPerPage}
+                    OFFSET ${mysql.escape(offsetDb)}`
                 console.log(query)
 
                 let [err, listProduct] = await to(this.mysqlDb.poolQuery(query))

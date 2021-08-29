@@ -40,9 +40,9 @@ productApi.get('/get-by-category-slug/:category_slug', (req,res,next) => {
     let {category_slug} = req.params
 
     console.log(category_slug);
-    let {productsPerPage,pageNumber,orderType,search} = req.query;
+    let {minPrice,maxPrice,productsPerPage,pageNumber,orderType,search} = req.query;
     productService
-    .getProductsByCategorySlug(category_slug,productsPerPage,pageNumber,orderType,search)
+    .getProductsByCategorySlug(category_slug,minPrice,maxPrice,productsPerPage,pageNumber,orderType,search)
     .then(listProduct => {
         return res.status(200).json({status:200,message:"Success",data: listProduct})
     })
