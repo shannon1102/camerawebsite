@@ -2097,6 +2097,240 @@
         }
       }
     },
+    "/banner/": {
+      "get": {
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+         
+        ],
+        "tags": [
+          "Banner Api"
+        ],
+        "summary": "Get Banner",
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "success",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/banner"
+              }
+            }
+          },
+          "500": {
+            "description": "error",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          }
+        }
+      },
+      "post": {
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "x-access-token",
+            "in": "header",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "require": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "list_images": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "minItems": 0
+
+                  }
+                }
+              }
+            }
+          }
+        ],
+        "tags": [
+          "Banner Api"
+        ],
+        "summary": "Create Banner",
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "success",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "message": {
+                  "type": "string"
+                },
+                "insertedId": {
+                  "type": "integer"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "error",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          }
+        }
+      }
+    },
+    "/banner/{id}": {
+      "get": {
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "type": "integer",
+            "in": "path",
+            "required": true
+          }
+        ],
+        "tags": [
+          "Banner Api"
+        ],
+        "summary": "Get banner by Id",
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "success",
+            "schema": {
+              "$ref": "#/definitions/banner"
+            }
+          },
+          "500": {
+            "description": "error",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          }
+        }
+      },
+      "put": {
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "x-access-token",
+            "in": "header",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "id",
+            "type": "integer",
+            "in": "path",
+            "description": "ID of banner",
+            "required": true
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "list_images": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "minItems": 0
+
+                  }
+                }
+              }
+            }
+          }
+        ],
+        "tags": [
+          "Banner Api"
+        ],
+        "summary": "Update banner by ID",
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "success",
+            "schema": {
+              "$ref": "#/definitions/success"
+            }
+          },
+          "500": {
+            "description": "error",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          }
+        }
+      },
+      "delete": {
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "x-access-token",
+            "in": "header",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "id",
+            "type": "integer",
+            "in": "path",
+            "required": true
+          }
+        ],
+        "tags": [
+          "Banner Api"
+        ],
+        "summary": "Delete banner by ID",
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "success",
+            "schema": {
+              "$ref": "#/definitions/success"
+            }
+          },
+          "500": {
+            "description": "error",
+            "schema": {
+              "$ref": "#/definitions/error"
+            }
+          }
+        }
+      }
+    },
     "/user/information": {
       "get": {
         "consumes": [
@@ -2442,6 +2676,22 @@
         "slug": {
           "type": "string"
         }
+      }
+    },
+    "banner": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer"
+        },
+        "list_images": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minItems": 0
+          }
+        }
+
       }
     },
     "contact": {

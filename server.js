@@ -29,6 +29,7 @@ const tagApi = require('./apis/tag/tagApi');
 const inquiryApi = require('./apis/inquiry/inquiryApi');
 const userApi = require('./apis/auth/userApi');
 const companyProfileApi = require('./apis/companyProfile/companyProfileApi');
+const bannerApi = require('./apis/banner/bannerApi');
 
 backendRoute.use('/', indexApi);
 backendRoute.use('/post',postApi);  
@@ -39,6 +40,7 @@ backendRoute.use('/tag',tagApi);
 backendRoute.use('/inquiry',inquiryApi);
 backendRoute.use('/user',userApi);
 backendRoute.use('/company-profile',companyProfileApi);
+backendRoute.use('/banner',bannerApi);
 
 app.use('/api', backendRoute);
 
