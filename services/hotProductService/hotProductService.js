@@ -23,7 +23,7 @@ class HotProductService {
                     orderByDb = 'DESC'
                 }
                 const query =
-                    `SELECT p.*,pi.url_image1,pi.url_image2,pi.url_image3,pi.url_image4
+                    `SELECT p.*,hp.product_id,pi.url_image1,pi.url_image2,pi.url_image3,pi.url_image4
                     FROM product as p  
                     JOIN hot_product as hp ON p.id = hp.product_id 
                     JOIN product_image as pi ON pi.product_id = p.id
@@ -102,7 +102,7 @@ class HotProductService {
     returnListProduct = (listProduct) => {
         return listProduct.map(e => {
             return {
-                "id": e.id,
+                "id": e.product_id,
                 "name": e.name,
                 "description": e.description,
                 "price": e.price,
