@@ -94,7 +94,7 @@ class PostService {
             }
             const query = `
                 SELECT * FROM post
-                JOIN tag ON tag.id = post.id
+                JOIN tag ON tag.id = post.tag_id
                 WHERE tag.slug = ${mysql.escape(tag_slug)}
                 ORDER BY post.create_at ${mysql.escape(orderByDb).split(`'`)[1]}
                 LIMIT ${postsPerPage}
