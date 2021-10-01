@@ -107,7 +107,7 @@ class HotProductService {
                 "description": e.description,
                 "price": e.price,
                 "discount": e.discount,
-                "new_price": e.price - e.price * (e.discount / 100),
+                "new_price": Math.round(e.price - e.price * (e.discount / 100)),
                 "category_id": e.category_id,
                 "slug": e.slug,
                 "create_at": e.create_at,
