@@ -29,7 +29,7 @@ postApi.get('/:id', async (req, res, next) => {
 
         return res.status(200).json({status:200,message:"Success",data:postFounded})
     } catch (error) {
-        return res.status(500).json({status:500,message: error})
+        return res.status(404).json({status:404,message: error})
     }
 })
 postApi.get('/get-by-slug/:slug', async (req, res, next) => {
@@ -39,7 +39,7 @@ postApi.get('/get-by-slug/:slug', async (req, res, next) => {
 
         return res.status(200).json({status:200,message:"Success",data:postFounded})
     } catch (error) {
-        return res.status(500).json({status:500,message: error})
+        return res.status(404).json({status:404,message: error})
     }
 })
 postApi.get('/get-by-tag-id/:tag_id', async (req, res, next) => {

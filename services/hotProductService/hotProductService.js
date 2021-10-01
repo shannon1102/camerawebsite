@@ -23,7 +23,7 @@ class HotProductService {
                     orderByDb = 'DESC'
                 }
                 const query =
-                    `SELECT p.*,hp.product_id,pi.url_image1,pi.url_image2,pi.url_image3,pi.url_image4
+                    `SELECT p.*,hp.product_id,pi.url_image1,pi.url_image2,pi.url_image3,pi.url_image4,pi.url_image5
                     FROM product as p  
                     JOIN hot_product as hp ON p.id = hp.product_id 
                     JOIN product_image as pi ON pi.product_id = p.id
@@ -112,7 +112,7 @@ class HotProductService {
                 "slug": e.slug,
                 "create_at": e.create_at,
                 "update_at": e.update_at,
-                "list_product_images": [e.url_image1, e.url_image2, e.url_image3, e.url_image4].filter(e1 => (e1 !== null && e1?.length > 0))
+                "list_product_images": [e.url_image1, e.url_image2, e.url_image3, e.url_image4,e.url_image5].filter(e1 => (e1 !== null && e1?.length > 0))
             }
         })
     }

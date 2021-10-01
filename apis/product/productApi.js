@@ -52,37 +52,6 @@ productApi.get('/get-by-category-slug/:category_slug', (req,res,next) => {
 
 })
 
-
-// productApi.get('/get-by-category-id/:category_id', (req,res,next) => {
-    
-//     let {category_id} = req.params
-//     console.log(category_id);
-//     let {productsPerPage,pageNumber,orderType,search} = req.query;
-//     productService
-//     .getProductsByCategoryId(category_id,productsPerPage,pageNumber,orderType,search)
-//     .then(listProduct => {
-//         return res.status(200).json({status:200,message:"Success",data: listProduct})
-//     })
-//     .catch(err=>{
-//         return res.status(500).json({status:500,message: err})
-//     })
-
-// })
-
-// productApi.get('/get-by-category-name/',checkRequiredFieldInQuery(['main_category', 'category']), (req,res,next) => {
-    
-//     let {main_category, category,productsPerPage,pageNumber,orderType,search} = req.query;
-//     productService
-//     .getProductsByCategoryName(main_category, category,productsPerPage,pageNumber,orderType,search)
-//     .then(listProduct => {
-//         return res.status(200).json({status:200,message:"Success",data: listProduct})
-//     })
-//     .catch(err=>{
-//         return res.status(500).json({status:500,message: err})
-//     })
-
-// })
-
 productApi.get('/:id',(req,res,next)=>{
     let {id} = req.params
     console.log(id)
@@ -107,9 +76,8 @@ productApi.get('/get-by-slug/:slug',(req,res,next)=>{
         return res.status(500).json({status:500,message: err})
     })  
 })
-productApi.post('/',verifyToken,adminRole,checkRequiredFieldInBody(['name','description','price','category_id']), (req,res,next)=>{
+productApi.post('/',verifyToken,adminRole,checkRequiredFieldInBody(['name','category_id']), (req,res,next)=>{
     let {name,description,detail,list_product_images,price,discount,category_id} = req.body
-    console.log("sdadda",req.body)
     productService
     .createProduct(name, description, detail,list_product_images, price, discount, category_id)
     .then(result => { 
