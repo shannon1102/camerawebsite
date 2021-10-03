@@ -30,7 +30,7 @@ class TagService {
                 LIMIT ${itemsPerPage}
                 OFFSET ${mysql.escape(offsetDb)}
             `
-            console.log(query);
+         
             let [err, result] = await to(this.mysqlDb.poolQuery(query))
             if (err) {
                 logger.error(`[tagService][getAllTag] errors: `, err)
@@ -59,7 +59,7 @@ class TagService {
                 return resolve(tagResult[0])
 
             } catch (error) {
-                console.log(error);
+                
                 reject(error)
             }
 
@@ -83,7 +83,7 @@ class TagService {
                 return resolve(tagResult[0])
 
             } catch (error) {
-                console.log(error);
+              
                 reject(error)
             }
 
@@ -91,7 +91,7 @@ class TagService {
     }
     createTag(name) {
         return new Promise(async (resolve, reject) => {
-            console.log(name);
+         
             const slug = createSlug(name);
             const query = `
                 INSERT INTO tag(name,slug)
@@ -99,7 +99,7 @@ class TagService {
 
             const [err, result] = await to(this.mysqlDb.poolQuery(query))
             if (err) {
-                console.log(err);
+              
                 logger.error(`[tagService][createtag] errors: `, err)
                 return reject(err?.sqlMessage ? err.sqlMessage : err)
             }

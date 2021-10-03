@@ -14,7 +14,6 @@ class CompanyProfileService {
                 SELECT * FROM company_profile
                 ORDER BY create_at DESC
             `
-            console.log(query);
             let [err, result] = await to(this.mysqlDb.poolQuery(query))
             if (err) {
                 logger.error(`[CompanyProfileService][getCompanyProfile] errors: `, err)
@@ -31,7 +30,6 @@ class CompanyProfileService {
                 const query = `
                 SELECT * FROM company_profile WHERE id = ${mysql.escape(id)}
                 `
-                console.log(query);
                 const [err, companyProfile] = await to(this.mysqlDb.poolQuery(query))
                 if (err) {
                     logger.error(`[CompanyProfileService][getCompanyProfileById] errors: `, err)
@@ -48,7 +46,6 @@ class CompanyProfileService {
         })
     }
     createCompanyProfile(name,address, basic_information,phone,zalo, url_image) {
-        console.log("Post")
         return new Promise(async (resolve, reject) => {
           
             const query = `
@@ -57,7 +54,6 @@ class CompanyProfileService {
 
             const [err, result] = await to(this.mysqlDb.poolQuery(query))
             if (err) {
-                console.log(err);
                 logger.error(`[CompanyProfileService][createCompanyProfile] errors: `, err)
                 return reject(err?.sqlMessage ? err.sqlMessage : err)
             }

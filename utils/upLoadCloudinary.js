@@ -13,7 +13,7 @@ let upLoadCloudinary = (filename) => {
 
     cloudinary.uploader.upload(filename,{folder: 'post'}, function (error, result) {
       
-      // console.log(result, error)
+    
       if (result) {
         resolve(result);
         unlink(filename, (err) => {
@@ -33,7 +33,7 @@ let deleteImageCloudinary = (public_url) => {
 
     cloudinary.uploader.destroy(public_url, function (error, result) {
       
-      // console.log(result, error)
+   
       if (err) {
         reject(error);
        

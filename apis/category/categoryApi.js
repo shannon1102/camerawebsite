@@ -14,7 +14,7 @@ categoryApi.get('/', async (req, res, next) => {
     try {
         let { categorysPerPage, pageNumber, orderType } = req.query
         const categoryFounded = await categoryService.getAllCategory(categorysPerPage, pageNumber, orderType)
-        console.log(categoryFounded);
+      
         return res.status(200).json({
             status: 200,
             message: "Success",

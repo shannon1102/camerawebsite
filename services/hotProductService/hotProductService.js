@@ -33,7 +33,6 @@ class HotProductService {
                     ORDER BY hp.create_at ${mysql.escape(orderByDb).split(`'`)[1]}
                     LIMIT ${productsPerPage}
                     OFFSET ${mysql.escape(offsetDb)}`
-                console.log(query)
                 let [err, listProduct] = await to(this.mysqlDb.poolQuery(query))
                 if (err) {
                     logger.error(`[hotProductService][getHotProducts] errors : `, err)
@@ -60,8 +59,7 @@ class HotProductService {
 
                 const query = `INSERT INTO hot_product(product_id) 
                 VALUES (${mysql.escape(product_id)})`
-                console.log(query);
-                console.log("????????")
+            
                 const [err2, result] = await to(this.mysqlDb.poolQuery(query))
                 if (err2) {
                     logger.error(`[hotProductService][createHotProduct] errors: `, err)

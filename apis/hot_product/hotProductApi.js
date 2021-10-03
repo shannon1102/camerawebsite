@@ -24,7 +24,6 @@ hotProductApi.get('/', (req,res,next) => {
 
 hotProductApi.get('/set/:product_id',verifyToken,adminRole, (req,res,next)=>{
     let {product_id} = req.params
-    console.log(req.body)
     hotProductService
     .setHotProduct(product_id)
     .then(result => { 

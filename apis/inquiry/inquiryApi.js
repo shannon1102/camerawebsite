@@ -24,7 +24,6 @@ inquiryApi.get('/',verifyToken,adminRole, (req,res,next) => {
 inquiryApi.get('/get-by-category-id/:category_id',verifyToken,adminRole, (req,res,next) => {
     
     let {category_id} = req.params
-    console.log(category_id);
     let {inquiryPerPage,pageNumber,orderType,search} = req.query;
     inquiryService
     .getinquirysByCategoryId(category_id,inquiryPerPage,pageNumber,orderType,search)
@@ -41,7 +40,6 @@ inquiryApi.get('/get-by-customer-name/:name', (req,res,next) => {
     
    
     let {name} = req.params
-    console.log(name);
     let {search} = req.query;
     inquiryService
     .getInquirysByCustomerName(name,search)
@@ -67,7 +65,6 @@ inquiryApi.get('/:id',verifyToken,adminRole,(req,res,next)=>{
 inquiryApi.post('/',checkRequiredFieldInBody(['phone','product_id']), (req,res,next)=>{
     
     let {customer_name,email,phone,message,product_name,product_id,product_link} = req.body
-    console.log(product_link);
     inquiryService
     .createInquiry(customer_name,email,phone,message,product_name,product_id,product_link)
     .then(result => { 

@@ -23,7 +23,6 @@ productApi.get('/', (req,res,next) => {
 productApi.get('/get-by-category-id/:category_id', (req,res,next) => {
     
     let {category_id} = req.params
-    console.log(category_id);
     let {productsPerPage,pageNumber,orderType,search} = req.query;
     productService
     .getProductsByCategoryId(category_id,productsPerPage,pageNumber,orderType,search)
@@ -39,7 +38,6 @@ productApi.get('/get-by-category-slug/:category_slug', (req,res,next) => {
     
     let {category_slug} = req.params
 
-    console.log(category_slug);
     let {minPrice,maxPrice,productsPerPage,pageNumber,orderType,search} = req.query;
     productService
     .getProductsByCategorySlug(category_slug,minPrice,maxPrice,productsPerPage,pageNumber,orderType,search)
@@ -54,7 +52,6 @@ productApi.get('/get-by-category-slug/:category_slug', (req,res,next) => {
 
 productApi.get('/:id',(req,res,next)=>{
     let {id} = req.params
-    console.log(id)
     productService
     .getProductById(id)
     .then(listProduct=>{
@@ -66,7 +63,6 @@ productApi.get('/:id',(req,res,next)=>{
 })
 productApi.get('/get-by-slug/:slug',(req,res,next)=>{
     let {slug} = req.params
-    console.log(slug)
     productService
     .getProductBySlug(slug)
     .then(listProduct=>{
@@ -93,7 +89,6 @@ productApi.post('/',verifyToken,adminRole,checkRequiredFieldInBody(['name','cate
 productApi.put('/:id',verifyToken,adminRole, (req,res,next)=>{
     let {id} = req.params
     let {name,description,detail,list_product_images,price,discount,category_id} = req.body
-    console.log(req.body)
     productService
     .updateProduct(id,name,description,detail,list_product_images,price,discount,category_id)
     .then(result=>{

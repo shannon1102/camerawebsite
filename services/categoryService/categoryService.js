@@ -30,7 +30,6 @@ class CategoryService {
                 LIMIT ${itemsPerPage}
                 OFFSET ${mysql.escape(offsetDb)}
             `
-            console.log(query);
             let [err, result] = await to(this.mysqlDb.poolQuery(query))
             if (err) {
                 logger.error(`[CategoryService][getCatergories] errors: `, err)
@@ -59,7 +58,6 @@ class CategoryService {
                 return resolve(categoryResult[0])
 
             } catch (error) {
-                console.log(error);
                 reject(error)
             }
 
@@ -83,7 +81,6 @@ class CategoryService {
                 return resolve(categoryResult[0])
 
             } catch (error) {
-                console.log(error);
                 reject(error)
             }
 
@@ -105,7 +102,6 @@ class CategoryService {
     }
     createCategory(name, description) {
         return new Promise(async (resolve, reject) => {
-            console.log(name);
             const slug = createSlug(name);
             const query = `
                 INSERT INTO category(name,description,slug)
@@ -113,7 +109,6 @@ class CategoryService {
 
             const [err, result] = await to(this.mysqlDb.poolQuery(query))
             if (err) {
-                console.log(err);
                 logger.error(`[CategoryService][createCategory] errors: `, err)
                 return reject(err?.sqlMessage ? err.sqlMessage : err)
             }

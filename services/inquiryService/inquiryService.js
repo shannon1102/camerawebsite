@@ -33,7 +33,7 @@ class InquiryService {
                 LIMIT ${itemsPerPage}
                 OFFSET ${mysql.escape(offsetDb)}
             `
-            console.log(query);
+    
             let [err, inquiryResult] = await to(this.mysqlDb.poolQuery(query))
             if (err) {
                 logger.error(`[inquiryService][getinquirys] errors: `, err)
@@ -83,10 +83,8 @@ class InquiryService {
                 INSERT INTO inquiry(customer_name,email,phone,message,product_name,product_id,product_link)
                 VALUES(${mysql.escape(customer_name)},${mysql.escape(email)},${mysql.escape(phone)},${mysql.escape(message)},${mysql.escape(product_name)},${mysql.escape(product_id)},${mysql.escape(product_link)})
             `
-            console.log(query)
             const [err, result] = await to(this.mysqlDb.poolQuery(query))
             if (err) {
-                console.log(err);
                 logger.error(`[inquiryService][createinquiry] errors: `, err)
                 return reject(err?.sqlMessage ? err.sqlMessage : err)
             }
@@ -105,7 +103,6 @@ class InquiryService {
                 reject(err);
             }
             }catch(err){
-                console.log(`Send mail failure: ${err}`);
                 reject(`${err}`)
 
             }

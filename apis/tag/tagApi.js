@@ -13,7 +13,6 @@ tagApi.get('/', async (req, res, next) => {
     try {
         let { tagsPerPage, pageNumber, orderType } = req.query
         const tagFounded = await tagService.getAllTag(tagsPerPage, pageNumber, orderType)
-        console.log(tagFounded);
         return res.status(200).json({
             status: 200,
             message: "Success",

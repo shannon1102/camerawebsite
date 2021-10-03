@@ -17,7 +17,6 @@ class UserService {
                 const query2 = `SELECT COUNT(*) AS numUser FROM user WHERE username = ${mysql.escape(newUser.username)}`
                 let result2 = await this.mysqlDb.poolQuery(query2)
         
-                console.log(result1)
                 if (result1[0].numUser > 0 && result2[0].numUser > 0) {
                     return reject(`Username and email is existed`)
                 } else if (result1[0].numUser > 0) {
@@ -89,7 +88,7 @@ class UserService {
     }
     changePassword(setPassword) {
         return new Promise(async (resolve,reject)=>{
-            console.log(setPassword)
+          
             const userId = setPassword.userId
             const query = `SELECT * FROM user WHERE id = ${mysql.escape(userId)}`;
             const [err,userFoundArray] = await to(this.mysqlDb.poolQuery(query))

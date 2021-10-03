@@ -14,7 +14,7 @@ const userService = new UserService(mysqlDb)
 
 userApi.post('/signup', checkRequiredFieldInBody(['username', 'email', 'password']), async (req, res, next) => {
     
-    console.log("Vao signup");
+  
     if (!process.env.SECRET_KEY) {
         return res.status(500).json({
             message: 'Secrete key is missing'
@@ -23,7 +23,7 @@ userApi.post('/signup', checkRequiredFieldInBody(['username', 'email', 'password
 
     const hashedPassword = bcrypt.hashSync(req.body.password, 8)
    
-    console.log(req.body);  
+  
     const newUser = {
         email: req.body.email,
         username: req.body.username,
@@ -109,7 +109,7 @@ userApi.get('/information', verifyToken, (req, res, next) => {
 })
 userApi.post('/change-password',verifyToken,adminRole,checkRequiredFieldInBody(['oldPassword','newPassword']), (req, res, next) => {
     // check secret token for jwt
-    console.log(req.body)
+  
     if (!process.env.SECRET_KEY){
         return res.status(500).json({message:'Secret key not found, cannot login'})
     }
