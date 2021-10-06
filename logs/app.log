@@ -7088,3 +7088,62 @@
 2021-10-03T09:35:56+07:00 info: '::1 - - [03/Oct/2021:02:35:56 +0000] "GET /api/banner/ HTTP/1.1" 200 57 "http://localhost:5000/api/api-docs/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.61 Safari/537.36"\n'
 2021-10-03T09:37:55+07:00 info: '::1 - - [03/Oct/2021:02:37:55 +0000] "GET /api/banner/ HTTP/1.1" 304 - "http://localhost:5000/api/api-docs/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.61 Safari/537.36"\n'
 2021-10-03T09:38:05+07:00 info: '::1 - - [03/Oct/2021:02:38:05 +0000] "POST /api/banner/ HTTP/1.1" 200 57 "http://localhost:5000/api/api-docs/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.61 Safari/537.36"\n'
+2021-10-07T04:41:15+07:00 info: '::1 - - [06/Oct/2021:21:41:15 +0000] "GET /api/api-docs/ HTTP/1.1" 304 - "-" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.71 Safari/537.36"\n'
+2021-10-07T04:41:15+07:00 info: '::1 - - [06/Oct/2021:21:41:15 +0000] "GET /api/api-docs/swagger-ui-init.js HTTP/1.1" 200 67981 "http://localhost:5000/api/api-docs/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.71 Safari/537.36"\n'
+2021-10-07T04:41:15+07:00 info: '::1 - - [06/Oct/2021:21:41:15 +0000] "GET /api/api-docs/swagger-ui.css HTTP/1.1" 200 143669 "http://localhost:5000/api/api-docs/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.71 Safari/537.36"\n'
+2021-10-07T04:41:15+07:00 info: '::1 - - [06/Oct/2021:21:41:15 +0000] "GET /api/api-docs/swagger-ui-standalone-preset.js HTTP/1.1" 200 338084 "http://localhost:5000/api/api-docs/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.71 Safari/537.36"\n'
+2021-10-07T04:41:15+07:00 info: '::1 - - [06/Oct/2021:21:41:15 +0000] "GET /api/api-docs/swagger-ui-bundle.js HTTP/1.1" 200 1100495 "http://localhost:5000/api/api-docs/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.71 Safari/537.36"\n'
+2021-10-07T04:42:26+07:00 info: '::1 - - [06/Oct/2021:21:42:26 +0000] "POST /api/user/login HTTP/1.1" 500 31 "http://localhost:5000/api/api-docs/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.71 Safari/537.36"\n'
+2021-10-07T04:42:30+07:00 info: '::1 - - [06/Oct/2021:21:42:30 +0000] "POST /api/user/login HTTP/1.1" 200 207 "http://localhost:5000/api/api-docs/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.71 Safari/537.36"\n'
+2021-10-07T04:42:45+07:00 error: 'uncaughtException: err2 is not defined\n' +
+  'ReferenceError: err2 is not defined\n' +
+  '    at Query.<anonymous> (/home/dalang/deploy/cam/camerawebsite/services/productService/productService.js:242:106)\n' +
+  '    at Query.<anonymous> (/home/dalang/deploy/cam/camerawebsite/node_modules/mysql/lib/Connection.js:526:10)\n' +
+  '    at Query._callback (/home/dalang/deploy/cam/camerawebsite/node_modules/mysql/lib/Connection.js:488:16)\n' +
+  '    at Query.Sequence.end (/home/dalang/deploy/cam/camerawebsite/node_modules/mysql/lib/protocol/sequences/Sequence.js:83:24)\n' +
+  '    at Query._handleFinalResultPacket (/home/dalang/deploy/cam/camerawebsite/node_modules/mysql/lib/protocol/sequences/Query.js:149:8)\n' +
+  '    at Query.OkPacket (/home/dalang/deploy/cam/camerawebsite/node_modules/mysql/lib/protocol/sequences/Query.js:74:10)\n' +
+  '    at Protocol._parsePacket (/home/dalang/deploy/cam/camerawebsite/node_modules/mysql/lib/protocol/Protocol.js:291:23)\n' +
+  '    at Parser._parsePacket (/home/dalang/deploy/cam/camerawebsite/node_modules/mysql/lib/protocol/Parser.js:433:10)\n' +
+  '    at Parser.write (/home/dalang/deploy/cam/camerawebsite/node_modules/mysql/lib/protocol/Parser.js:43:10)\n' +
+  '    at Protocol.write (/home/dalang/deploy/cam/camerawebsite/node_modules/mysql/lib/protocol/Protocol.js:38:16)'
+2021-10-07T04:43:07+07:00 error: '[productService][createProduct] errors:  ER_NO_REFERENCED_ROW_2: Cannot add or update a child row: a foreign key constraint fails (`cameradb`.`product`, CONSTRAINT `product_ibfk_1` FOREIGN KEY (`category_id`) REFERENCES `category` (`id`) ON DELETE CASCADE)'
+2021-10-07T04:43:07+07:00 info: '::1 - - [06/Oct/2021:21:43:07 +0000] "POST /api/product/ HTTP/1.1" 500 218 "http://localhost:5000/api/api-docs/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.71 Safari/537.36"\n'
+2021-10-07T04:43:14+07:00 error: '[productService][createProduct] errors:  ER_NO_REFERENCED_ROW_2: Cannot add or update a child row: a foreign key constraint fails (`cameradb`.`product`, CONSTRAINT `product_ibfk_1` FOREIGN KEY (`category_id`) REFERENCES `category` (`id`) ON DELETE CASCADE)'
+2021-10-07T04:43:14+07:00 info: '::1 - - [06/Oct/2021:21:43:14 +0000] "POST /api/product/ HTTP/1.1" 500 218 "http://localhost:5000/api/api-docs/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.71 Safari/537.36"\n'
+2021-10-07T04:43:21+07:00 info: '::1 - - [06/Oct/2021:21:43:21 +0000] "GET /api/category/ HTTP/1.1" 200 814 "http://localhost:5000/api/api-docs/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.71 Safari/537.36"\n'
+2021-10-07T04:43:30+07:00 info: '::1 - - [06/Oct/2021:21:43:30 +0000] "POST /api/product/ HTTP/1.1" 200 56 "http://localhost:5000/api/api-docs/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.71 Safari/537.36"\n'
+2021-10-07T04:45:19+07:00 info: '::1 - - [06/Oct/2021:21:45:19 +0000] "GET /api/product/ HTTP/1.1" 200 12754 "http://localhost:5000/api/api-docs/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.71 Safari/537.36"\n'
+2021-10-07T04:45:47+07:00 info: '::1 - - [06/Oct/2021:21:45:47 +0000] "DELETE /api/product/52 HTTP/1.1" 200 53 "http://localhost:5000/api/api-docs/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.71 Safari/537.36"\n'
+2021-10-07T04:49:07+07:00 error: 'uncaughtException: missing ) after argument list\n' +
+  '/home/dalang/deploy/cam/camerawebsite/services/productService/productService.js:345\n' +
+  '            } catch (error) {\n' +
+  '            ^\n' +
+  '\n' +
+  'SyntaxError: missing ) after argument list\n' +
+  '    at wrapSafe (internal/modules/cjs/loader.js:979:16)\n' +
+  '    at Module._compile (internal/modules/cjs/loader.js:1027:27)\n' +
+  '    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)\n' +
+  '    at Module.load (internal/modules/cjs/loader.js:928:32)\n' +
+  '    at Function.Module._load (internal/modules/cjs/loader.js:769:14)\n' +
+  '    at Module.require (internal/modules/cjs/loader.js:952:19)\n' +
+  '    at require (internal/modules/cjs/helpers.js:88:18)\n' +
+  '    at Object.<anonymous> (/home/dalang/deploy/cam/camerawebsite/apis/product/productApi.js:4:24)\n' +
+  '    at Module._compile (internal/modules/cjs/loader.js:1063:30)\n' +
+  '    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)'
+2021-10-07T04:53:54+07:00 info: '::1 - - [06/Oct/2021:21:53:54 +0000] "GET /api/api-docs/ HTTP/1.1" 304 - "-" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.71 Safari/537.36"\n'
+2021-10-07T04:53:54+07:00 info: '::1 - - [06/Oct/2021:21:53:54 +0000] "PUT /api/product/112 HTTP/1.1" - - "http://localhost:5000/api/api-docs/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.71 Safari/537.36"\n'
+2021-10-07T04:53:54+07:00 info: '::1 - - [06/Oct/2021:21:53:54 +0000] "GET /api/api-docs/swagger-ui-init.js HTTP/1.1" 304 - "http://localhost:5000/api/api-docs/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.71 Safari/537.36"\n'
+2021-10-07T04:53:54+07:00 info: '::1 - - [06/Oct/2021:21:53:54 +0000] "GET /api/api-docs/swagger-ui.css HTTP/1.1" 304 - "http://localhost:5000/api/api-docs/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.71 Safari/537.36"\n'
+2021-10-07T04:53:54+07:00 info: '::1 - - [06/Oct/2021:21:53:54 +0000] "GET /api/api-docs/swagger-ui-bundle.js HTTP/1.1" 304 - "http://localhost:5000/api/api-docs/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.71 Safari/537.36"\n'
+2021-10-07T04:53:54+07:00 info: '::1 - - [06/Oct/2021:21:53:54 +0000] "GET /api/api-docs/swagger-ui-standalone-preset.js HTTP/1.1" 304 - "http://localhost:5000/api/api-docs/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.71 Safari/537.36"\n'
+2021-10-07T04:54:05+07:00 info: '::1 - - [06/Oct/2021:21:54:05 +0000] "POST /api/user/login HTTP/1.1" 500 31 "http://localhost:5000/api/api-docs/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.71 Safari/537.36"\n'
+2021-10-07T04:54:14+07:00 info: '::1 - - [06/Oct/2021:21:54:14 +0000] "POST /api/user/login HTTP/1.1" 200 207 "http://localhost:5000/api/api-docs/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.71 Safari/537.36"\n'
+2021-10-07T04:54:52+07:00 info: '::1 - - [06/Oct/2021:21:54:52 +0000] "GET /api/product/ HTTP/1.1" 304 - "http://localhost:5000/api/api-docs/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.71 Safari/537.36"\n'
+2021-10-07T04:55:13+07:00 info: '::1 - - [06/Oct/2021:21:55:13 +0000] "POST /api/product/ HTTP/1.1" 200 56 "http://localhost:5000/api/api-docs/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.71 Safari/537.36"\n'
+2021-10-07T04:55:21+07:00 info: '::1 - - [06/Oct/2021:21:55:21 +0000] "POST /api/product/ HTTP/1.1" 200 56 "http://localhost:5000/api/api-docs/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.71 Safari/537.36"\n'
+2021-10-07T04:55:28+07:00 info: '::1 - - [06/Oct/2021:21:55:28 +0000] "POST /api/product/ HTTP/1.1" 200 56 "http://localhost:5000/api/api-docs/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.71 Safari/537.36"\n'
+2021-10-07T04:55:34+07:00 info: '::1 - - [06/Oct/2021:21:55:34 +0000] "GET /api/product/ HTTP/1.1" 200 13591 "http://localhost:5000/api/api-docs/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.71 Safari/537.36"\n'
+2021-10-07T04:56:47+07:00 error: '[productService][updateProduct] errors:  ER_NO_REFERENCED_ROW_2: Cannot add or update a child row: a foreign key constraint fails (`cameradb`.`product`, CONSTRAINT `product_ibfk_1` FOREIGN KEY (`category_id`) REFERENCES `category` (`id`) ON DELETE CASCADE)'
+2021-10-07T04:56:47+07:00 info: '::1 - - [06/Oct/2021:21:56:47 +0000] "PUT /api/product/62 HTTP/1.1" 500 765 "http://localhost:5000/api/api-docs/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.71 Safari/537.36"\n'
+2021-10-07T04:57:01+07:00 info: '::1 - - [06/Oct/2021:21:57:01 +0000] "PUT /api/product/62 HTTP/1.1" 200 86 "http://localhost:5000/api/api-docs/" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.71 Safari/537.36"\n'
